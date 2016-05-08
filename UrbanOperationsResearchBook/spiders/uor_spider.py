@@ -1,16 +1,17 @@
 '''
 @author: rmahfoud
 '''
-
+import UrbanOperationsResearchBook as uor
+import UrbanOperationsResearchBook.settings as settings
 import scrapy
-import os, shutil, re, urlparse
+import os, shutil, re
 
 class UORSpider(scrapy.Spider):
-    name = "uor"
-    allowed_domains = ["web.mit.edu"]
-    root_url = "http://web.mit.edu/urban_or_book/www/book/"
+    name = settings.SPIDER_NAME
+    allowed_domains = [settings.ALLOWED_DOMAIN]
+    root_url = settings.ROOT_URL
     start_urls = [root_url]
-    destination_dir = "/tmp/" + name + "/"
+    destination_dir = settings.BOOK_FILES
     chapters = dict()
 
     def __init__(self, *args, **kwargs):
@@ -29,7 +30,7 @@ class UORSpider(scrapy.Spider):
 
     def parse_chapter_contents(self, response):
         # Chapter chapter_title
-        chapter_spec = response.selector.xpath("//table[1]/tr[1]/td[2]/font[1]/text()").extract()
+        chapter_spec = response.xpath("//table[1]/tr[1]/td[2]/font[1]/text()").extract()
         chapter_no = chapter_spec[1].strip().replace("Chapter ", "").replace(":", "")
         chapter_title = chapter_spec[2].strip()
         chapter = dict()
@@ -46,7 +47,7 @@ class UORSpider(scrapy.Spider):
             if a:
                 section = dict()
                 section_short_url = a.xpath("@href").extract_first().strip()
-                section['url'] = self.get_full_url(response.url, section_short_url)
+                section['url'] = uor.join_url(response.url, section_short_url)
                 chapter['sections'].append(section)
                 section_meta = {'section': section}
                 if section_short_url == "problems2.html":
@@ -74,36 +75,26 @@ class UORSpider(scrapy.Spider):
         yield chapter
 
     def parse_section_contents(self, response):
+        section = response.meta['section']
         self.logger.debug("Parsing content of %s" % response.url)
+
+        # Remove malformed comments
+        response = response.replace(body=response.body.replace("<!--table--!>", ""))
         # Remove anything before and after the horizontal lines
         body = re.sub(r'(?is)(^.*<body[^>]*>).*?<hr>(.*)<hr>.*(</body>.*$)', r'\1\2\3', response.body)
         # Save to file name matchine url
-        file_name = self.get_file_name(response.url)
+        file_name = uor.relative_url(self.root_url, response.url)
         self.logger.debug("Saving body of %s to %s" % (response.url, file_name))
-        return self.save_to_file(file_name, body)
+        section['content_file'] = self.save_to_file(file_name, body)
+        # Download images
+        section['file_urls'] = [uor.join_url(response.url, url) for url in response.xpath('//table//img/@src').extract()]
+        yield section
 
     def parse_problems(self, response):
         section = response.meta['section']
-        self.logger.debug("Parsing prolems for section: %s" % section)
+        self.logger.debug("Parsing problems for section: %s" % section)
         pass
 
-    def cleanup_page(self, url):
-        pass
-    
-    def save_contents(self, section, url):
-        pass
-    
-    def save_image(self, url):
-        pass
-
-    def get_full_url(self, referrer, url):
-        if referrer:
-            url = urlparse.urljoin(referrer, url)
-        return url
-
-    def get_file_name(self,  url):
-        return re.sub(r'^' + self.root_url, '',  url)
-    
     def save_to_file(self, file_name, body):
         file_name = os.path.join(self.destination_dir, file_name)
         self.logger.debug("Writing file %s" % file_name)
