@@ -20,6 +20,14 @@ bin/run.py
 
 The EPUB book will appear in the current director as <tt>UrbanOperationsResearch.epub</tt> for you to enjoy on your favorite e-reader.
 
+# Quality
+
+The following are issues I found with the book as it's currently present online:
+
+- The URL of [Prof Odoni's home page](http://web.mit.edu/orc/www/faculty/odoni.html) leads nowhere
+- [Section 4.8.1](http://web.mit.edu/urban_or_book/www/book/chapter4/4.8.1.html) is missing
+- [Table 6-12](http://web.mit.edu/urban_or_book/www/book/chapter6/images6/Table6-12.gif) in [section 6.5.7](http://web.mit.edu/urban_or_book/www/book/chapter6/6.5.7.html) is missing 
+
 # Copyrights
 
 These scripts are for personal enjoyment only. Please respect the copyright owners of the original book and do not distribute the ebook that's produced by these scripts.
