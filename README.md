@@ -1,6 +1,6 @@
 <div style="text-align:center">
 
-![UOR Map](map3.jpg)
+![UOR Map](https://raw.githubusercontent.com/rmahfoud/UrbanOperationsResearchBook/master/map3.jpg)
 
 </div>
 
