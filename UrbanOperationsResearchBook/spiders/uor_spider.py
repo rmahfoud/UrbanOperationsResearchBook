@@ -12,40 +12,54 @@ class UORSpider(scrapy.Spider):
     root_url = settings.ROOT_URL
     start_urls = [root_url]
     destination_dir = settings.BOOK_FILES
-    chapters = dict()
-
+    
     def __init__(self, *args, **kwargs):
         if os.path.isdir(self.destination_dir):
             shutil.rmtree(self.destination_dir)
         os.makedirs(self.destination_dir)
+        self.book = kwargs['book']
+        if not self.book:
+            self.book = {'item_type': 'book'}
+        self.chapters = dict()
+        self.book['chapters'] = self.chapters
         return object.__init__(self, *args, **kwargs)
 
     def parse(self, response):
+        chapter = {'item_type': 'chapter'}
+        chapter['no'] = 0
+        chapter['title'] = 'Home Page'
+        map_section = {'item_type': 'section'}
+        map_section['url'] = response.url
+        map_section['no'] = 0
+        map_section['title'] = "Map"
+        section_meta = {'section': map_section}
+        yield scrapy.Request(map_section['url'], callback=self.parse_section_contents, meta=section_meta)
+        chapter['sections'] = [map_section]
+        self.chapters[0] = chapter
+        yield chapter
         for href in response.xpath("//a[contains(@href,chapter)]/@href"):
             url = response.urljoin(href.extract())
             self.logger.debug("Crawling url %s" % url)
             yield scrapy.Request(url, callback=self.parse_chapter_contents)
-        #self.save_file("index.html", response.body)
-        print self.chapters
-
+        
     def parse_chapter_contents(self, response):
         # Chapter chapter_title
         chapter_spec = response.xpath("//table[1]/tr[1]/td[2]/font[1]/text()").extract()
         chapter_no = chapter_spec[1].strip().replace("Chapter ", "").replace(":", "")
         chapter_title = chapter_spec[2].strip()
-        chapter = dict()
+        chapter = {'item_type': 'chapter'}
         chapter['no'] = chapter_no
         chapter['title'] = chapter_title
         chapter['contents_page'] = response.url
         chapter['sections'] = []
-        self.chapters[chapter_no] = chapter
+        self.chapters[int(chapter_no)] = chapter
         self.logger.debug("Chapter: %s, Title: %s" % (chapter_no, chapter_title))
 
         # Sections
         for row in response.xpath("//tr[descendant::a[not(starts-with(@href, '..'))]]"):
             a = row.xpath("td/a")
             if a:
-                section = dict()
+                section = {'item_type': 'section'}
                 section_short_url = a.xpath("@href").extract_first().strip()
                 section['url'] = uor.join_url(response.url, section_short_url)
                 chapter['sections'].append(section)
@@ -97,6 +111,8 @@ class UORSpider(scrapy.Spider):
 
     def save_to_file(self, file_name, body):
         file_name = os.path.join(self.destination_dir, file_name)
+        if os.path.isdir(file_name):
+            file_name = os.path.join(file_name, 'index.html')
         self.logger.debug("Writing file %s" % file_name)
         dirname = os.path.dirname(file_name)
         if not os.path.isdir(dirname):

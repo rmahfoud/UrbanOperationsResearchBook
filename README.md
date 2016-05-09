@@ -34,11 +34,21 @@ These scripts are for personal enjoyment only. Please respect the copyright owne
 
 # Dependencies:
 
+On Ubuntu/Debian, run the following:
 ```bash
 sudo apt-get install libffi-dev libssl-dev build-essential \
      g++-4.4 libboost-all-dev libsparsehash-dev \
      git-core perl ipython
-sudo pip install cryptography scrapy
+```
+
+or equivalent on non-Debian systems. 
+
+Then install the following python dependencies:
+
+```bash
+sudo pip install cryptography
+sudo pip install scrapy
+sudo pip install ebooklib
 ```
 
 # License
