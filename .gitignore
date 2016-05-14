@@ -1,1 +1,4 @@
 *.pyc
+epub/content/chapter*/
+epub/content/images/
+epub/content/index.html

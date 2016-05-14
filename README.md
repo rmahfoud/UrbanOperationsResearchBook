@@ -48,8 +48,13 @@ Then install the following python dependencies:
 ```bash
 sudo pip install cryptography
 sudo pip install scrapy
-sudo pip install ebooklib
 ```
+
+# TODO:
+
+- Remove inline style and replace with CSS
+- Eliminate malformed comments: <!-- ... --!>
+- Update links in index.htm to point to relative URL of top of chapter
 
 # License
 

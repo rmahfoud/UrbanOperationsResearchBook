@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="book-url" version="3.0" xml:lang="en-US">
+
+	<metadata 
+   			xmlns:dc="http://purl.org/dc/elements/1.1/"
+      		xmlns:dcterms="http://purl.org/dc/terms/"
+     	 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      		xmlns:opf="http://www.idpf.org/2007/opf">
+      
+      	<dc:title>Urban Operations Research</dc:title>
+      	<dc:identifier id="book-url">http://web.mit.edu/urban_or_book/www/book/</dc:identifier>
+      	<dc:language>en-US</dc:language>
+		<dc:creator id="creator-larson">Richard C. Larson</dc:creator>
+		<meta refines="#creator-larson" property="role" scheme="marc:relators">aut</meta>
+      	<dc:creator id="creator-odoni">Amedeo R. Odoni</dc:creator>
+		<meta refines="#creator-odoni" property="role" scheme="marc:relators">aut</meta>
+		<dc:source id="isbn-id">urn:isbn:0139394478</dc:source>
+		<meta refines="#isbn-id" property="identifier-type" scheme="onix:codelist5">02</meta>
+
+      	<dc:subject>Non-fiction, Municipal services -- United States, Operations research, Civil Engineering</dc:subject>
+
+      	<dc:contributor id="gitrepo">https://github.com/rmahfoud/UrbanOperationsResearchBook</dc:contributor>
+		<meta refines="#gitrepo" property="role" scheme="marc:relators">bkp</meta>
+   </metadata>
+
+   <manifest>
+      <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+      <item id="css" href="UrbanOperationsResearch.css" media-type="text/css" />
+      <item id="logo" href="images/map3.jpg" media-type="image/jpeg" />
+      <item id="title" href="index.html" media-type="application/xhtml+xml" />
+      <item id="contents" href="contents.html" media-type="application/xhtml+xml" />
+      <item id="chapter1" href="chapter1/1.0.html" media-type="application/xhtml+xml" />
+      <item id="chapter2" href="chapter2/2.0.html" media-type="application/xhtml+xml" />
+      <item id="chapter3" href="chapter3/3.0.html" media-type="application/xhtml+xml" />
+      <item id="chapter4" href="chapter4/4.0.html" media-type="application/xhtml+xml" />
+      <item id="chapter5" href="chapter5/5.0.html" media-type="application/xhtml+xml" />
+      <item id="chapter6" href="chapter6/6.0.html" media-type="application/xhtml+xml" />
+      <item id="chapter7" href="chapter7/7.0.html" media-type="application/xhtml+xml" />
+      <item id="chapter8" href="chapter8/8.0.html" media-type="application/xhtml+xml" />
+      <item id="generef" href="chapter8/genref.html" media-type="application/xhtml+xml" />
+   </manifest>
+
+   <spine toc="ncx">
+      <itemref idref="title" />
+      <itemref idref="contents" />
+      <itemref idref="chapter1" />
+      <itemref idref="chapter2" />
+      <itemref idref="chapter3" />
+      <itemref idref="chapter4" />
+      <itemref idref="chapter5" />
+      <itemref idref="chapter6" />
+      <itemref idref="chapter7" />
+      <itemref idref="chapter8" />
+      <itemref idref="generef" />
+   </spine>
+
+   <guide>
+      <reference type="title-page" title="Title Page" href="index.html" />
+      <reference type="toc" title="Table of Contents" href="contents.html" />
+      <reference type="text" title="Text" href="chapter1/1.0.html" />
+   </guide>
+
+</package>

@@ -1,0 +1,9 @@
+#! /usr/bin/env sh
+epubdir=${1?Source directory required}
+set -e
+epubfile=${2:-`cd $epubdir/../ && pwd`/$epubdir.epub}
+
+cd $epubdir
+zip -X0 $epubfile mimetype
+zip -Xur9D $epubfile *
+set +e
