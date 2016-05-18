@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="book-url" version="3.0" xml:lang="en-US">
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookUrl" version="2.0" xml:lang="en-US">
 
 	<metadata 
    			xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -9,25 +9,20 @@
       		xmlns:opf="http://www.idpf.org/2007/opf">
       
       	<dc:title>Urban Operations Research</dc:title>
-      	<dc:identifier id="book-url">http://web.mit.edu/urban_or_book/www/book/</dc:identifier>
-      	<dc:language>en-US</dc:language>
-		<dc:creator id="creator-larson">Richard C. Larson</dc:creator>
-		<meta refines="#creator-larson" property="role" scheme="marc:relators">aut</meta>
-      	<dc:creator id="creator-odoni">Amedeo R. Odoni</dc:creator>
-		<meta refines="#creator-odoni" property="role" scheme="marc:relators">aut</meta>
-		<dc:source id="isbn-id">urn:isbn:0139394478</dc:source>
-		<meta refines="#isbn-id" property="identifier-type" scheme="onix:codelist5">02</meta>
-
-      	<dc:subject>Non-fiction, Municipal services -- United States, Operations research, Civil Engineering</dc:subject>
-
-      	<dc:contributor id="gitrepo">https://github.com/rmahfoud/UrbanOperationsResearchBook</dc:contributor>
-		<meta refines="#gitrepo" property="role" scheme="marc:relators">bkp</meta>
+      	<dc:identifier id="BookUrl" opf:scheme="URI">http://web.mit.edu/urban_or_book/www/book/</dc:identifier>
+		<dc:identifier opf:scheme="ISBN">0139394478</dc:identifier>
+      	<dc:language>en</dc:language>
+		<dc:creator opf:role="aut">Richard C. Larson</dc:creator>
+      	<dc:creator opf:role="aut">Amedeo R. Odoni</dc:creator>
+      	<dc:subject>Non-fiction, Municipal services -- United States, Operations research, Civil engineering, Transportation engineering</dc:subject>
+      	<dc:contributor opf:role="oth">https://github.com/rmahfoud/UrbanOperationsResearchBook</dc:contributor>
+      	<dc:source>http://web.mit.edu/urban_or_book/www/book/</dc:source>
    </metadata>
 
    <manifest>
-      <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+      <item id="ncx" href="toc.ncx" properties="nav" media-type="application/x-dtbncx+xml" />
       <item id="css" href="UrbanOperationsResearch.css" media-type="text/css" />
-      <item id="logo" href="images/map3.jpg" media-type="image/jpeg" />
+      <item id="logo" href="images/map3.jpg" properties="cover-image" media-type="image/jpeg" />
       <item id="title" href="index.html" media-type="application/xhtml+xml" />
       <item id="contents" href="contents.html" media-type="application/xhtml+xml" />
       <item id="chapter1" href="chapter1/1.0.html" media-type="application/xhtml+xml" />

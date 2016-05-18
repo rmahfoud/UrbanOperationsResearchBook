@@ -55,6 +55,7 @@ sudo pip install scrapy
 - Remove inline style and replace with CSS
 - Eliminate malformed comments: <!-- ... --!>
 - Update links in index.htm to point to relative URL of top of chapter
+- Convert to xhtml
 
 # License
 
