@@ -11,7 +11,7 @@ class UORSpider(scrapy.Spider):
     allowed_domains = [settings.ALLOWED_DOMAIN]
     root_url = settings.ROOT_URL
     start_urls = [root_url]
-    destination_dir = settings.BOOK_FILES
+    destination_dir = settings.CONTENT_DIR
     
     def __init__(self, *args, **kwargs):
         if os.path.isdir(self.destination_dir):

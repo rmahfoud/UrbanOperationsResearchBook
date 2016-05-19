@@ -65,8 +65,8 @@ class UORNCXGenerator(UORXmlGenerator):
         if not 'content_file' in section:
             missing_indicator = " (missing)"
             section['content_file'] = self.MISSING_CONTENT_FILE
-        self.write_line(outfd, "    <content src=\"%s\" />" % self.relative_url(section['content_file']))
         self.write_line(outfd, "    <navLabel><text>%s%s</text></navLabel>" % (section['full_title'], missing_indicator))
+        self.write_line(outfd, "    <content src=\"%s\" />" % self.relative_url(section['content_file']))
         section_index = section_index + 1
         while section_index < len(chapter['sections']):
             if self.isSubSection(section, chapter['sections'][section_index]):
@@ -83,9 +83,9 @@ class UORNCXGenerator(UORXmlGenerator):
         for chapter_no in sorted(self.book['chapters'].keys()):
             for section in self.book['chapters'][chapter_no]['sections']:
                 if section['section_type'] != 'content':
-                    self.write_line(outfd, "<pageTarget class=\"h2\" id=\"%s\" type=\"normal\">" % self.get_section_id(chapter_no, section))
-                    self.write_line(outfd, "    <content src=\"%s\" />" % self.relative_url(section['content_file']))
+                    self.write_line(outfd, "<pageTarget class=\"h2\" id=\"page_%s\" type=\"normal\">" % self.get_section_id(chapter_no, section))
                     self.write_line(outfd, "    <navLabel><text>%s</text></navLabel>" % section['full_title'])
+                    self.write_line(outfd, "    <content src=\"%s\" />" % self.relative_url(section['content_file']))
                     self.write_line(outfd, "</pageTarget>")
                     
 

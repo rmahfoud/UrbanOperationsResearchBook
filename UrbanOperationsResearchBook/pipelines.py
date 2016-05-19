@@ -13,7 +13,7 @@ class UORImagesPipeline(FilesPipeline):
         for f in item['files']:
             from_path = os.path.join(settings.IMAGE_FILE_CACHE, f['path'])
             relative_path = uor.relative_url(settings.ROOT_URL, f['url'])
-            to_path = os.path.join(settings.BOOK_FILES, relative_path)
+            to_path = os.path.join(settings.CONTENT_DIR, relative_path)
             logger.debug("Copying %s to %s" % (from_path, to_path))
             if not os.path.isdir(os.path.dirname(to_path)):
                 os.makedirs(os.path.dirname(to_path))

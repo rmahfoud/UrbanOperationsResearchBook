@@ -25,23 +25,23 @@
             <navLabel><text>Chapter 1: Introduction</text></navLabel>
             <content src="chapter1/1.0.html" />
             <navPoint class="h2" id="chapter1_section1">
-                <content src="chapter1/1.0.html" />
                 <navLabel><text>1: Introduction</text></navLabel>
+                <content src="chapter1/1.0.html" />
                 <navPoint class="h3" id="chapter1_section1.1">
-                    <content src="chapter1/1.1.html" />
                     <navLabel><text>1.1: Cost Effectiveness of Urban Operations Research Studies</text></navLabel>
+                    <content src="chapter1/1.1.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter1_section1.2">
-                    <content src="chapter1/1.2.html" />
                     <navLabel><text>1.2: Problems Well Suited to Urban Operations Research</text></navLabel>
+                    <content src="chapter1/1.2.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter1_section1.3">
-                    <content src="chapter1/1.3.html" />
                     <navLabel><text>1.3: Steps in an Operations Research Study</text></navLabel>
+                    <content src="chapter1/1.3.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter1_section1.4">
-                    <content src="chapter1/1.4.html" />
                     <navLabel><text>1.4: Need for a Probabilistic Analysis</text></navLabel>
+                    <content src="chapter1/1.4.html" />
                 </navPoint>
             </navPoint>
         </navPoint>
@@ -49,912 +49,912 @@
             <navLabel><text>Chapter 2: Brief Review of Probabilistic Modeling</text></navLabel>
             <content src="chapter2/2.0.html" />
             <navPoint class="h2" id="chapter2_section2">
-                <content src="chapter2/2.0.html" />
                 <navLabel><text>2: Brief Review of Probabilistic Modeling</text></navLabel>
+                <content src="chapter2/2.0.html" />
                 <navPoint class="h3" id="chapter2_section2.1">
-                    <content src="chapter2/2.1.html" />
                     <navLabel><text>2.1: Experiment, Sample Space, and Events</text></navLabel>
+                    <content src="chapter2/2.1.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.2">
-                    <content src="chapter2/2.2.html" />
                     <navLabel><text>2.2: Event Probabilities</text></navLabel>
+                    <content src="chapter2/2.2.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.3">
-                    <content src="chapter2/2.3.html" />
                     <navLabel><text>2.3: Random Variables</text></navLabel>
+                    <content src="chapter2/2.3.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.4">
-                    <content src="chapter2/2.4.html" />
                     <navLabel><text>2.4: Probability Mass Function</text></navLabel>
+                    <content src="chapter2/2.4.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.5">
-                    <content src="chapter2/2.5.html" />
                     <navLabel><text>2.5: Conditional PMF's and Independence</text></navLabel>
+                    <content src="chapter2/2.5.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.6">
-                    <content src="chapter2/2.6.html" />
                     <navLabel><text>2.6: Functions of Random Variables</text></navLabel>
+                    <content src="chapter2/2.6.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.7">
-                    <content src="chapter2/2.7.html" />
                     <navLabel><text>2.7: Expectation</text></navLabel>
+                    <content src="chapter2/2.7.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.8">
-                    <content src="chapter2/2.8.html" />
                     <navLabel><text>2.8: The z-transform</text></navLabel>
+                    <content src="chapter2/2.8.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.9">
-                    <content src="chapter2/2.9.html" />
                     <navLabel><text>2.9: Often-Used PMF's</text></navLabel>
+                    <content src="chapter2/2.9.html" />
                     <navPoint class="h4" id="chapter2_section2.9.1">
-                        <content src="chapter2/2.9.1.html" />
                         <navLabel><text>2.9.1: Bernoulli PMF</text></navLabel>
+                        <content src="chapter2/2.9.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter2_section2.9.2">
-                        <content src="chapter2/2.9.2.html" />
                         <navLabel><text>2.9.2: Geometric PMF</text></navLabel>
+                        <content src="chapter2/2.9.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter2_section2.9.3">
-                        <content src="chapter2/2.9.3.html" />
                         <navLabel><text>2.9.3: Binomial PMF</text></navLabel>
+                        <content src="chapter2/2.9.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter2_section2.9.4">
-                        <content src="chapter2/2.9.4.html" />
                         <navLabel><text>2.9.4: Poisson PMF</text></navLabel>
+                        <content src="chapter2/2.9.4.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.10">
-                    <content src="chapter2/2.10.html" />
                     <navLabel><text>2.10: Probability Density Functions</text></navLabel>
+                    <content src="chapter2/2.10.html" />
                     <navPoint class="h4" id="chapter2_section2.10.1">
-                        <content src="chapter2/2.10.1.html" />
                         <navLabel><text>2.10.1: Conditional PDF's and independence</text></navLabel>
+                        <content src="chapter2/2.10.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter2_section2.10.2">
-                        <content src="chapter2/2.10.2.html" />
                         <navLabel><text>2.10.2: Expectation</text></navLabel>
+                        <content src="chapter2/2.10.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter2_section2.10.3">
-                        <content src="chapter2/2.10.3.html" />
                         <navLabel><text>2.10.3: Unit impulse function</text></navLabel>
+                        <content src="chapter2/2.10.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter2_section2.10.4">
-                        <content src="chapter2/2.10.4.html" />
                         <navLabel><text>2.10.4: The s-transform</text></navLabel>
+                        <content src="chapter2/2.10.4.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.11">
-                    <content src="chapter2/2.11.html" />
                     <navLabel><text>2.11: Often-Used PDF's</text></navLabel>
+                    <content src="chapter2/2.11.html" />
                     <navPoint class="h4" id="chapter2_section2.11.1">
-                        <content src="chapter2/2.11.1.html" />
                         <navLabel><text>2.11.1: Uniform PDF</text></navLabel>
+                        <content src="chapter2/2.11.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter2_section2.11.2">
-                        <content src="chapter2/2.11.2.html" />
                         <navLabel><text>2.11.2: Exponential PDF</text></navLabel>
+                        <content src="chapter2/2.11.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter2_section2.11.3">
-                        <content src="chapter2/2.11.3.html" />
                         <navLabel><text>2.11.3: Erlang PDF</text></navLabel>
+                        <content src="chapter2/2.11.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter2_section2.11.4">
-                        <content src="chapter2/2.11.4.html" />
                         <navLabel><text>2.11.4: Gaussian PDF</text></navLabel>
+                        <content src="chapter2/2.11.4.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.12">
-                    <content src="chapter2/2.12.html" />
                     <navLabel><text>2.12: Poisson Process</text></navLabel>
+                    <content src="chapter2/2.12.html" />
                     <navPoint class="h4" id="chapter2_section2.12.1">
-                        <content src="chapter2/2.12.1.html" />
                         <navLabel><text>2.12.1: Postulates of a Poisson process</text></navLabel>
+                        <content src="chapter2/2.12.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter2_section2.12.2">
-                        <content src="chapter2/2.12.2.html" />
                         <navLabel><text>2.12.2: Interarrival times</text></navLabel>
+                        <content src="chapter2/2.12.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter2_section2.12.3">
-                        <content src="chapter2/2.12.3.html" />
                         <navLabel><text>2.12.3: Unordered arrival times</text></navLabel>
+                        <content src="chapter2/2.12.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter2_section2.12.4">
-                        <content src="chapter2/2.12.4.html" />
                         <navLabel><text>2.12.4: Multiple independent Poisson processes</text></navLabel>
+                        <content src="chapter2/2.12.4.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.13">
-                    <content src="chapter2/2.13.html" />
                     <navLabel><text>2.13: Random Incidence</text></navLabel>
+                    <content src="chapter2/2.13.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.14">
-                    <content src="chapter2/2.14.html" />
                     <navLabel><text>2.14: Pedestrian Crossing Problem</text></navLabel>
+                    <content src="chapter2/2.14.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter2_section2.15">
-                    <content src="chapter2/2.15.html" />
                     <navLabel><text>2.15: Conclusion</text></navLabel>
+                    <content src="chapter2/2.15.html" />
                 </navPoint>
             </navPoint>
             <navPoint class="h2" id="chapter2_sectionproblems">
-                <content src="chapter2/problems2.html" />
                 <navLabel><text>Chapter 2 Problems</text></navLabel>
+                <content src="chapter2/problems2.html" />
             </navPoint>
         </navPoint>
         <navPoint class="h1" id="chapter3">
             <navLabel><text>Chapter 3: Functions of Random Variables and Geometric Probability</text></navLabel>
             <content src="chapter3/3.0.html" />
             <navPoint class="h2" id="chapter3_section3">
-                <content src="chapter3/3.0.html" />
                 <navLabel><text>3: Functions of Random Variables and Geometric Probability</text></navLabel>
+                <content src="chapter3/3.0.html" />
                 <navPoint class="h3" id="chapter3_section3.1">
-                    <content src="chapter3/3.1.html" />
                     <navLabel><text>3.1: Functions of Random Variables: Derived Distributions</text></navLabel>
+                    <content src="chapter3/3.1.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter3_section3.2">
-                    <content src="chapter3/3.2.html" />
                     <navLabel><text>3.2: Perturbation Methods</text></navLabel>
+                    <content src="chapter3/3.2.html" />
                     <navPoint class="h4" id="chapter3_section3.2.1">
-                        <content src="chapter3/3.2.1.html" />
                         <navLabel><text>3.2.1: Perturbations to a Random Variable</text></navLabel>
+                        <content src="chapter3/3.2.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter3_section3.2.2">
-                        <content src="chapter3/3.2.2.html" />
                         <navLabel><text>3.2.2: Perturbations to a PDF</text></navLabel>
+                        <content src="chapter3/3.2.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter3_section3.2.3">
-                        <content src="chapter3/3.2.3.html" />
                         <navLabel><text>3.2.3: Perturbations to a Sample Space</text></navLabel>
+                        <content src="chapter3/3.2.3.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter3_section3.3">
-                    <content src="chapter3/3.3.html" />
                     <navLabel><text>3.3: Geometric Probability</text></navLabel>
+                    <content src="chapter3/3.3.html" />
                     <navPoint class="h4" id="chapter3_section3.3.1">
-                        <content src="chapter3/3.3.1.html" />
                         <navLabel><text>3.3.1: Buffon's Needle Experiment</text></navLabel>
+                        <content src="chapter3/3.3.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter3_section3.3.2">
-                        <content src="chapter3/3.3.2.html" />
                         <navLabel><text>3.3.2: Bertrand's Paradox</text></navLabel>
+                        <content src="chapter3/3.3.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter3_section3.3.3">
-                        <content src="chapter3/3.3.3.html" />
                         <navLabel><text>3.3.3: Cauchy Distribution</text></navLabel>
+                        <content src="chapter3/3.3.3.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter3_section3.4">
-                    <content src="chapter3/3.4.html" />
                     <navLabel><text>3.4: Assumption of Uniformity</text></navLabel>
+                    <content src="chapter3/3.4.html" />
                     <navPoint class="h4" id="chapter3_section3.4.1">
-                        <content src="chapter3/3.4.1.html" />
                         <navLabel><text>3.4.1: A Geometrical Probability Interpretation of PDF's</text></navLabel>
+                        <content src="chapter3/3.4.1.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter3_section3.5">
-                    <content src="chapter3/3.5.html" />
                     <navLabel><text>3.5: Crofton's Method for Computing Mean Values</text></navLabel>
+                    <content src="chapter3/3.5.html" />
                     <navPoint class="h4" id="chapter3_section3.5.1">
-                        <content src="chapter3/3.5.1.html" />
                         <navLabel><text>3.5.1: Response Distance of an Ambulette Revisited</text></navLabel>
+                        <content src="chapter3/3.5.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter3_section3.5.2">
-                        <content src="chapter3/3.5.2.html" />
                         <navLabel><text>3.5.2: Summary of Method</text></navLabel>
+                        <content src="chapter3/3.5.2.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter3_section3.6">
-                    <content src="chapter3/3.6.html" />
                     <navLabel><text>3.6: Coverage</text></navLabel>
+                    <content src="chapter3/3.6.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter3_section3.7">
-                    <content src="chapter3/3.7.html" />
                     <navLabel><text>3.7: Expected Travel Distances and Times: Some Practical Results</text></navLabel>
+                    <content src="chapter3/3.7.html" />
                     <navPoint class="h4" id="chapter3_section3.7.1">
-                        <content src="chapter3/3.7.1.html" />
                         <navLabel><text>3.7.1: Simple Model</text></navLabel>
+                        <content src="chapter3/3.7.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter3_section3.7.2">
-                        <content src="chapter3/3.7.2.html" />
                         <navLabel><text>3.7.2: More Realistic Travel-Time Model</text></navLabel>
+                        <content src="chapter3/3.7.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter3_section3.7.3">
-                        <content src="chapter3/3.7.3.html" />
                         <navLabel><text>3.7.3: Expected Travel Distances: The General Case</text></navLabel>
+                        <content src="chapter3/3.7.3.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter3_section3.8">
-                    <content src="chapter3/3.8.html" />
                     <navLabel><text>3.8: Spatial Poisson Processes</text></navLabel>
+                    <content src="chapter3/3.8.html" />
                     <navPoint class="h4" id="chapter3_section3.8.1">
-                        <content src="chapter3/3.8.1.html" />
                         <navLabel><text>3.8.1: Description and Postulates</text></navLabel>
+                        <content src="chapter3/3.8.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter3_section3.8.2">
-                        <content src="chapter3/3.8.2.html" />
                         <navLabel><text>3.8.2: Time-space Poisson Process</text></navLabel>
+                        <content src="chapter3/3.8.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter3_section3.8.3">
-                        <content src="chapter3/3.8.3.html" />
                         <navLabel><text>3.8.3: Application to Facility Location and Districting</text></navLabel>
+                        <content src="chapter3/3.8.3.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter3_section3.9">
-                    <content src="chapter3/3.9.html" />
                     <navLabel><text>3.9: Alternative Spatial Processes</text></navLabel>
+                    <content src="chapter3/3.9.html" />
                     <navPoint class="h4" id="chapter3_section3.9.1">
-                        <content src="chapter3/3.9.1.html" />
                         <navLabel><text>3.9.1: Spread Process Yielding the Binomial PMF</text></navLabel>
+                        <content src="chapter3/3.9.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter3_section3.9.2">
-                        <content src="chapter3/3.9.2.html" />
                         <navLabel><text>3.9.2: Clustered Process Yielding the Negative Binomial PMF</text></navLabel>
+                        <content src="chapter3/3.9.2.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter3_section3.10">
-                    <content src="chapter3/3.10.html" />
                     <navLabel><text>3.10: Conclusion</text></navLabel>
+                    <content src="chapter3/3.10.html" />
                 </navPoint>
             </navPoint>
             <navPoint class="h2" id="chapter3_sectionreferences">
-                <content src="chapter3/references3.html" />
                 <navLabel><text>Chapter 3 References</text></navLabel>
+                <content src="chapter3/references3.html" />
             </navPoint>
             <navPoint class="h2" id="chapter3_sectionproblems">
-                <content src="chapter3/problems3/index.html" />
                 <navLabel><text>Chapter 3 Problems</text></navLabel>
+                <content src="chapter3/problems3/index.html" />
             </navPoint>
         </navPoint>
         <navPoint class="h1" id="chapter4">
             <navLabel><text>Chapter 4: Introduction to Queueing Theory and Its Applications</text></navLabel>
             <content src="chapter4/4.0.html" />
             <navPoint class="h2" id="chapter4_section4">
-                <content src="chapter4/4.0.html" />
                 <navLabel><text>4: Introduction to Queueing Theory and Its Applications</text></navLabel>
+                <content src="chapter4/4.0.html" />
                 <navPoint class="h3" id="chapter4_section4.1">
-                    <content src="chapter4/4.1.html" />
                     <navLabel><text>4.1: Questions And Answers In Queueing Theory</text></navLabel>
+                    <content src="chapter4/4.1.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter4_section4.2">
-                    <content src="chapter4/4.2.html" />
                     <navLabel><text>4.2: BackGround, Terms, And Some Conventional Notation</text></navLabel>
+                    <content src="chapter4/4.2.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter4_section4.3">
-                    <content src="chapter4/4.3.html" />
                     <navLabel><text>4.3: Defining The Quantities Of Interest</text></navLabel>
+                    <content src="chapter4/4.3.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter4_section4.4">
-                    <content src="chapter4/4.4.html" />
                     <navLabel><text>4.4: Some Important Relationships In Queueing Theory</text></navLabel>
+                    <content src="chapter4/4.4.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter4_section4.5">
-                    <content src="chapter4/4.5.html" />
                     <navLabel><text>4.5: Fundamental Queueing</text></navLabel>
+                    <content src="chapter4/4.5.html" />
                     <navPoint class="h4" id="chapter4_section4.5.1">
-                        <content src="chapter4/4.5.1.html" />
                         <navLabel><text>4.5.1: Response Distance of an Ambulette Revisited</text></navLabel>
+                        <content src="chapter4/4.5.1.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter4_section4.6">
-                    <content src="chapter4/4.6.html" />
                     <navLabel><text>4.6: Functions of Random Variables</text></navLabel>
+                    <content src="chapter4/4.6.html" />
                     <navPoint class="h4" id="chapter4_section4.6.1">
-                        <content src="chapter4/4.6.1.html" />
                         <navLabel><text>4.6.1: Case 1: One Operator, Infinite Number of Lines</text></navLabel>
+                        <content src="chapter4/4.6.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter4_section4.6.2">
-                        <content src="chapter4/4.6.2.html" />
                         <navLabel><text>4.6.2: Case 2: m Operators, Infinite Number of Lines</text></navLabel>
+                        <content src="chapter4/4.6.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter4_section4.6.3">
-                        <content src="chapter4/4.6.3.html" />
                         <navLabel><text>4.6.3: Case 3: One Operator, Finite Number of Lines</text></navLabel>
+                        <content src="chapter4/4.6.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter4_section4.6.4">
-                        <content src="chapter4/4.6.4.html" />
                         <navLabel><text>4.6.4: Case 4: m Operators, Finite Number of Lines</text></navLabel>
+                        <content src="chapter4/4.6.4.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter4_section4.6.5">
-                        <content src="chapter4/4.6.5.html" />
                         <navLabel><text>4.6.5: Extensions and Variations</text></navLabel>
+                        <content src="chapter4/4.6.5.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter4_section4.7">
-                    <content src="chapter4/4.7.html" />
                     <navLabel><text>4.7: Spatially Distributed Queues And The M/G/1 Queueing System</text></navLabel>
+                    <content src="chapter4/4.7.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter4_section4.8">
-                    <content src="chapter4/4.8.html" />
                     <navLabel><text>4.8: Useful Results For Difficult-To-Analyze Queueing Systems</text></navLabel>
+                    <content src="chapter4/4.8.html" />
                     <navPoint class="h4" id="chapter4_section4.8.1">
-                        <content src="." />
                         <navLabel><text>4.8.1: Why Are M/G/m, G/G/1, and G/G/m Difficult? (missing)</text></navLabel>
+                        <content src="." />
                     </navPoint>
                     <navPoint class="h4" id="chapter4_section4.8.2">
-                        <content src="chapter4/4.8.2.html" />
                         <navLabel><text>4.8.2: M/G/m Queueing Systems with No Waiting Space</text></navLabel>
+                        <content src="chapter4/4.8.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter4_section4.8.3">
-                        <content src="chapter4/4.8.3.html" />
                         <navLabel><text>4.8.3: G/G/1/1 System</text></navLabel>
+                        <content src="chapter4/4.8.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter4_section4.8.4">
-                        <content src="chapter4/4.8.4.html" />
                         <navLabel><text>4.8.4: G/G/m Queueing Systems</text></navLabel>
+                        <content src="chapter4/4.8.4.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter4_section4.9">
-                    <content src="chapter4/4.9.html" />
                     <navLabel><text>4.9: Queueing Systems With Priorities</text></navLabel>
+                    <content src="chapter4/4.9.html" />
                     <navPoint class="h4" id="chapter4_section4.9.1">
-                        <content src="chapter4/4.9.1.html" />
                         <navLabel><text>4.9.1: Preemptive and Nonpreemptive Priorities</text></navLabel>
+                        <content src="chapter4/4.9.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter4_section4.9.2">
-                        <content src="chapter4/4.9.2.html" />
                         <navLabel><text>4.9.2: Important Optimization Result</text></navLabel>
+                        <content src="chapter4/4.9.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter4_section4.9.3">
-                        <content src="chapter4/4.9.3.html" />
                         <navLabel><text>4.9.3: Nonpreemptive Priorities in a M/M/m System</text></navLabel>
+                        <content src="chapter4/4.9.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter4_section4.9.4">
-                        <content src="chapter4/4.9.4.html" />
                         <navLabel><text>4.9.4: Preemptive Priorities</text></navLabel>
+                        <content src="chapter4/4.9.4.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter4_section4.10">
-                    <content src="chapter4/4.10.html" />
                     <navLabel><text>4.10: Queueing Networks</text></navLabel>
+                    <content src="chapter4/4.10.html" />
                     <navPoint class="h4" id="chapter4_section4.10.1">
-                        <content src="chapter4/4.10.1.html" />
                         <navLabel><text>4.10.1: Important Property of M/M/m Quueing Systems</text></navLabel>
+                        <content src="chapter4/4.10.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter4_section4.10.2">
-                        <content src="chapter4/4.10.2.html" />
                         <navLabel><text>4.10.2: State-Transition-Diagram Approach to Networks with Blocking Effects</text></navLabel>
+                        <content src="chapter4/4.10.2.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter4_section4.11">
-                    <content src="chapter4/4.11.html" />
                     <navLabel><text>4.11: Time-Dependent Analysis Of The M/M/m Queueing System</text></navLabel>
+                    <content src="chapter4/4.11.html" />
                 </navPoint>
             </navPoint>
             <navPoint class="h2" id="chapter4_sectionreferences">
-                <content src="chapter4/references4.html" />
                 <navLabel><text>Chapter 4 References</text></navLabel>
+                <content src="chapter4/references4.html" />
             </navPoint>
             <navPoint class="h2" id="chapter4_sectionproblems">
-                <content src="chapter4/problems4/index.html" />
                 <navLabel><text>Chapter 4 Problems</text></navLabel>
+                <content src="chapter4/problems4/index.html" />
             </navPoint>
         </navPoint>
         <navPoint class="h1" id="chapter5">
             <navLabel><text>Chapter 5: Spatially Distributed Queues</text></navLabel>
             <content src="chapter5/5.0.html" />
             <navPoint class="h2" id="chapter5_section5">
-                <content src="chapter5/5.0.html" />
                 <navLabel><text>5: Spatially Distributed Queues</text></navLabel>
+                <content src="chapter5/5.0.html" />
                 <navPoint class="h3" id="chapter5_section5.1">
-                    <content src="chapter5/5.1.html" />
                     <navLabel><text>5.1: Server-to-Customer Systems</text></navLabel>
+                    <content src="chapter5/5.1.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter5_section5.2">
-                    <content src="chapter5/5.2.html" />
                     <navLabel><text>5.2: Using theM/G/1 Model</text></navLabel>
+                    <content src="chapter5/5.2.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter5_section5.3">
-                    <content src="chapter5/5.3.html" />
                     <navLabel><text>5.3: Two-Unit Model (Zero Line Capacity)</text></navLabel>
+                    <content src="chapter5/5.3.html" />
                     <navPoint class="h4" id="chapter5_section5.3.1">
-                        <content src="chapter5/5.3.1.html" />
                         <navLabel><text>5.3.1: Restrictions on service time and queueing behavior</text></navLabel>
+                        <content src="chapter5/5.3.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter5_section5.3.2">
-                        <content src="chapter5/5.3.2.html" />
                         <navLabel><text>5.3.2: General Model</text></navLabel>
+                        <content src="chapter5/5.3.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter5_section5.3.3">
-                        <content src="chapter5/5.3.3.html" />
                         <navLabel><text>5.3.3: Nonhomogenous rectangular city example</text></navLabel>
+                        <content src="chapter5/5.3.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter5_section5.3.4">
-                        <content src="chapter5/5.3.4.html" />
                         <navLabel><text>5.3.4: Optimal partitioning</text></navLabel>
+                        <content src="chapter5/5.3.4.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter5_section5.3.5">
-                        <content src="chapter5/5.3.5.html" />
                         <navLabel><text>5.3.5: Facility location</text></navLabel>
+                        <content src="chapter5/5.3.5.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter5_section5.4">
-                    <content src="chapter5/5.4.html" />
                     <navLabel><text>5.4: Hypercube Queueing Model</text></navLabel>
+                    <content src="chapter5/5.4.html" />
                     <navPoint class="h4" id="chapter5_section5.4.1">
-                        <content src="chapter5/5.4.1.html" />
                         <navLabel><text>5.4.1: Some uses of the model</text></navLabel>
+                        <content src="chapter5/5.4.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter5_section5.4.2">
-                        <content src="chapter5/5.4.2.html" />
                         <navLabel><text>5.4.2: Model assumptions</text></navLabel>
+                        <content src="chapter5/5.4.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter5_section5.4.3">
-                        <content src="chapter5/5.4.3.html" />
                         <navLabel><text>5.4.3: Three-server example (infinite line capacity)</text></navLabel>
+                        <content src="chapter5/5.4.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter5_section5.4.4">
-                        <content src="chapter5/5.4.4.html" />
                         <navLabel><text>5.4.4: System performance measures (infinite line capacity)</text></navLabel>
+                        <content src="chapter5/5.4.4.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter5_section5.4.5">
-                        <content src="chapter5/5.4.5.html" />
                         <navLabel><text>5.4.5: Extensions to the basic hypercube model</text></navLabel>
+                        <content src="chapter5/5.4.5.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter5_section5.5">
-                    <content src="chapter5/5.5.html" />
                     <navLabel><text>5.5: Hypercube Approximation Procedure (Infinite Line Capacity)</text></navLabel>
+                    <content src="chapter5/5.5.html" />
                     <navPoint class="h4" id="chapter5_section5.5.1">
-                        <content src="chapter5/5.5.1.html" />
                         <navLabel><text>5.5.1: Correction factor</text></navLabel>
+                        <content src="chapter5/5.5.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter5_section5.5.2">
-                        <content src="chapter5/5.5.2.html" />
                         <navLabel><text>5.5.2: Workload estimation</text></navLabel>
+                        <content src="chapter5/5.5.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter5_section5.5.3">
-                        <content src="chapter5/5.5.3.html" />
                         <navLabel><text>5.5.3: Return to the three-server example</text></navLabel>
+                        <content src="chapter5/5.5.3.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter5_section5.6">
-                    <content src="chapter5/5.6.html" />
                     <navLabel><text>5.6: Fraction of Dispatches That Are Interresponse Area Dispatches</text></navLabel>
+                    <content src="chapter5/5.6.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter5_section5.7">
-                    <content src="chapter5/5.7.html" />
                     <navLabel><text>5.7: Spatial Distribution of Busy Servers</text></navLabel>
+                    <content src="chapter5/5.7.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter5_section5.8">
-                    <content src="chapter5/5.8.html" />
                     <navLabel><text>5.8: Expected Travel Distances and Expected Travel Times, Revisited</text></navLabel>
+                    <content src="chapter5/5.8.html" />
                     <navPoint class="h4" id="chapter5_section5.8.1">
-                        <content src="chapter5/5.8.1.html" />
                         <navLabel><text>5.8.1: Extensions and empirical evidence</text></navLabel>
+                        <content src="chapter5/5.8.1.html" />
                     </navPoint>
                 </navPoint>
             </navPoint>
             <navPoint class="h2" id="chapter5_sectionreferences">
-                <content src="chapter5/references5.html" />
                 <navLabel><text>Chapter 5 References</text></navLabel>
+                <content src="chapter5/references5.html" />
             </navPoint>
             <navPoint class="h2" id="chapter5_sectionproblems">
-                <content src="chapter5/problems5/index.html" />
                 <navLabel><text>Chapter 5 Problems</text></navLabel>
+                <content src="chapter5/problems5/index.html" />
             </navPoint>
         </navPoint>
         <navPoint class="h1" id="chapter6">
             <navLabel><text>Chapter 6: Applications of Network Models</text></navLabel>
             <content src="chapter6/6.0.html" />
             <navPoint class="h2" id="chapter6_section6">
-                <content src="chapter6/6.0.html" />
                 <navLabel><text>6: Applications of Network Models</text></navLabel>
+                <content src="chapter6/6.0.html" />
                 <navPoint class="h3" id="chapter6_section6.1">
-                    <content src="chapter6/6.1.html" />
                     <navLabel><text>6.1: Definition of Terms and Notation</text></navLabel>
+                    <content src="chapter6/6.1.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter6_section6.2">
-                    <content src="chapter6/6.2.html" />
                     <navLabel><text>6.2: Travel Distances on Networks</text></navLabel>
+                    <content src="chapter6/6.2.html" />
                     <navPoint class="h4" id="chapter6_section6.2.1">
-                        <content src="chapter6/6.2.1.html" />
                         <navLabel><text>6.2.1: Shortest Paths From a Given Node to All Other Nodes</text></navLabel>
+                        <content src="chapter6/6.2.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.2.2">
-                        <content src="chapter6/6.2.2.html" />
                         <navLabel><text>6.2.2: Shortest Paths Between All Pairs of Nodes</text></navLabel>
+                        <content src="chapter6/6.2.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.2.3">
-                        <content src="chapter6/6.2.3.html" />
                         <navLabel><text>6.2.3: Traffic Assignment Problem</text></navLabel>
+                        <content src="chapter6/6.2.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.2.4">
-                        <content src="chapter6/6.2.4.html" />
                         <navLabel><text>6.2.4: Some Complications for Urban Travel</text></navLabel>
+                        <content src="chapter6/6.2.4.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.2.5">
-                        <content src="chapter6/6.2.5.html" />
                         <navLabel><text>6.2.5: Complexity of Algorithms</text></navLabel>
+                        <content src="chapter6/6.2.5.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter6_section6.3">
-                    <content src="chapter6/6.3.html" />
                     <navLabel><text>6.3: Minimum-Spanning-Tree Problem</text></navLabel>
+                    <content src="chapter6/6.3.html" />
                     <navPoint class="h4" id="chapter6_section6.3.1">
-                        <content src="chapter6/6.3.1.html" />
                         <navLabel><text>6.3.1: Solving the MST Problem</text></navLabel>
+                        <content src="chapter6/6.3.1.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter6_section6.4">
-                    <content src="chapter6/6.4.html" />
                     <navLabel><text>6.4: Routing Problems</text></navLabel>
+                    <content src="chapter6/6.4.html" />
                     <navPoint class="h4" id="chapter6_section6.4.1">
-                        <content src="chapter6/6.4.1.html" />
                         <navLabel><text>6.4.1: Edge Covering: The Chinese Postman's Problem</text></navLabel>
+                        <content src="chapter6/6.4.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.4.2">
-                        <content src="chapter6/6.4.2.html" />
                         <navLabel><text>6.4.2: Chinese Postman's Problem on an Undirected Graph</text></navLabel>
+                        <content src="chapter6/6.4.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.4.3">
-                        <content src="chapter6/6.4.3.html" />
                         <navLabel><text>6.4.3: Obtaining an Euler Tour</text></navLabel>
+                        <content src="chapter6/6.4.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.4.4">
-                        <content src="chapter6/6.4.4.html" />
                         <navLabel><text>6.4.4: Solving the Chinese Postman's Problem</text></navLabel>
+                        <content src="chapter6/6.4.4.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.4.5">
-                        <content src="chapter6/6.4.5.html" />
                         <navLabel><text>6.4.5: Node Covering: The Traveling Salesman Problem</text></navLabel>
+                        <content src="chapter6/6.4.5.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.4.6">
-                        <content src="chapter6/6.4.6.html" />
                         <navLabel><text>6.4.6: Solving TSP1</text></navLabel>
+                        <content src="chapter6/6.4.6.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.4.7">
-                        <content src="chapter6/6.4.7.html" />
                         <navLabel><text>6.4.7: Euclidean TSP</text></navLabel>
+                        <content src="chapter6/6.4.7.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.4.8">
-                        <content src="chapter6/6.4.8.html" />
                         <navLabel><text>6.4.8: Probabilistic View of the Traveling Salesman Problem</text></navLabel>
+                        <content src="chapter6/6.4.8.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.4.9">
-                        <content src="chapter6/6.4.9.html" />
                         <navLabel><text>6.4.9: Multiroue Problems</text></navLabel>
+                        <content src="chapter6/6.4.9.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.4.10">
-                        <content src="chapter6/6.4.10.html" />
                         <navLabel><text>6.4.10: Multiroute Node Covering</text></navLabel>
+                        <content src="chapter6/6.4.10.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.4.11">
-                        <content src="chapter6/6.4.11.html" />
                         <navLabel><text>6.4.11: m.TSP Problem</text></navLabel>
+                        <content src="chapter6/6.4.11.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.4.12">
-                        <content src="chapter6/6.4.12.html" />
                         <navLabel><text>6.4.12: Single.Depot VRP</text></navLabel>
+                        <content src="chapter6/6.4.12.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.4.13">
-                        <content src="chapter6/6.4.13.html" />
                         <navLabel><text>6.4.13: Multidepot VRP</text></navLabel>
+                        <content src="chapter6/6.4.13.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.4.14">
-                        <content src="chapter6/6.4.14.html" />
                         <navLabel><text>6.4.14: Multiroute Chinese Postman Problem</text></navLabel>
+                        <content src="chapter6/6.4.14.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter6_section6.5">
-                    <content src="chapter6/6.5.html" />
                     <navLabel><text>6.5: Facility Location Problems</text></navLabel>
+                    <content src="chapter6/6.5.html" />
                     <navPoint class="h4" id="chapter6_section6.5.1">
-                        <content src="chapter6/6.5.1.html" />
                         <navLabel><text>6.5.1: Basic Model</text></navLabel>
+                        <content src="chapter6/6.5.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.5.2">
-                        <content src="chapter6/6.5.2.html" />
                         <navLabel><text>6.5.2: Median Problems</text></navLabel>
+                        <content src="chapter6/6.5.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.5.3">
-                        <content src="chapter6/6.5.3.html" />
                         <navLabel><text>6.5.3: Generalization and Extensions</text></navLabel>
+                        <content src="chapter6/6.5.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.5.4">
-                        <content src="chapter6/6.5.4.html" />
                         <navLabel><text>6.5.4: Center Problems</text></navLabel>
+                        <content src="chapter6/6.5.4.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.5.5">
-                        <content src="chapter6/6.5.5.html" />
                         <navLabel><text>6.5.5: Multiple Centers</text></navLabel>
+                        <content src="chapter6/6.5.5.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.5.6">
-                        <content src="chapter6/6.5.6.html" />
                         <navLabel><text>6.5.6: Requirements Problems</text></navLabel>
+                        <content src="chapter6/6.5.6.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.5.7">
-                        <content src="chapter6/6.5.7.html" />
                         <navLabel><text>6.5.7: Set-Covering Problems</text></navLabel>
+                        <content src="chapter6/6.5.7.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.5.8">
-                        <content src="chapter6/6.5.8.html" />
                         <navLabel><text>6.5.8: Related Problems</text></navLabel>
+                        <content src="chapter6/6.5.8.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter6_section6.6">
-                    <content src="chapter6/6.6.html" />
                     <navLabel><text>6.6: Probabilistic Networks</text></navLabel>
+                    <content src="chapter6/6.6.html" />
                     <navPoint class="h4" id="chapter6_section6.6.1">
-                        <content src="chapter6/6.6.1.html" />
                         <navLabel><text>6.6.1: Description and Some Properties of Probabilistic Networks</text></navLabel>
+                        <content src="chapter6/6.6.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.6.2">
-                        <content src="chapter6/6.6.2.html" />
                         <navLabel><text>6.6.2: Discrete and Finite State Space for Probabilistic Networks</text></navLabel>
+                        <content src="chapter6/6.6.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter6_section6.6.3">
-                        <content src="chapter6/6.6.3.html" />
                         <navLabel><text>6.6.3: Facility Locations on Probabilistic Networks</text></navLabel>
+                        <content src="chapter6/6.6.3.html" />
                     </navPoint>
                 </navPoint>
             </navPoint>
             <navPoint class="h2" id="chapter6_sectionreferences">
-                <content src="chapter6/references6.html" />
                 <navLabel><text>Chapter 6 References</text></navLabel>
+                <content src="chapter6/references6.html" />
             </navPoint>
             <navPoint class="h2" id="chapter6_sectionproblems">
-                <content src="chapter6/problems6/index.html" />
                 <navLabel><text>Chapter 6 Problems</text></navLabel>
+                <content src="chapter6/problems6/index.html" />
             </navPoint>
         </navPoint>
         <navPoint class="h1" id="chapter7">
             <navLabel><text>Chapter 7: Simulation In The Urban Context</text></navLabel>
             <content src="chapter7/7.0.html" />
             <navPoint class="h2" id="chapter7_section7">
-                <content src="chapter7/7.0.html" />
                 <navLabel><text>7: Simulation In The Urban Context</text></navLabel>
+                <content src="chapter7/7.0.html" />
                 <navPoint class="h3" id="chapter7_section7.1">
-                    <content src="chapter7/7.1.html" />
                     <navLabel><text>7.1: Simulating Probabilistic Events</text></navLabel>
+                    <content src="chapter7/7.1.html" />
                     <navPoint class="h4" id="chapter7_section7.1.1">
-                        <content src="chapter7/7.1.1.html" />
                         <navLabel><text>7.1.1: Generating random numbers</text></navLabel>
+                        <content src="chapter7/7.1.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter7_section7.1.2">
-                        <content src="chapter7/7.1.2.html" />
                         <navLabel><text>7.1.2: Using several random-number generators</text></navLabel>
+                        <content src="chapter7/7.1.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter7_section7.1.3">
-                        <content src="chapter7/7.1.3.html" />
                         <navLabel><text>7.1.3: Generating samples from probability distributions</text></navLabel>
+                        <content src="chapter7/7.1.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter7_section7.1.4">
-                        <content src="chapter7/7.1.4.html" />
                         <navLabel><text>7.1.4: Simulating event times from a time-dependent Poisson Process</text></navLabel>
+                        <content src="chapter7/7.1.4.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter7_section7.2">
-                    <content src="chapter7/7.2.html" />
                     <navLabel><text>7.2: Geometrical Relations in Urban Simulation</text></navLabel>
+                    <content src="chapter7/7.2.html" />
                     <navPoint class="h4" id="chapter7_section7.2.1">
-                        <content src="chapter7/7.2.1.html" />
                         <navLabel><text>7.2.1: Efficient sorting and searching</text></navLabel>
+                        <content src="chapter7/7.2.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter7_section7.2.2">
-                        <content src="chapter7/7.2.2.html" />
                         <navLabel><text>7.2.2: Simulating the locations of urban events</text></navLabel>
+                        <content src="chapter7/7.2.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter7_section7.2.3">
-                        <content src="chapter7/7.2.3.html" />
                         <navLabel><text>7.2.3: Identifying the zones where events occur</text></navLabel>
+                        <content src="chapter7/7.2.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter7_section7.2.4">
-                        <content src="chapter7/7.2.4.html" />
                         <navLabel><text>7.2.4: Do n line segemnts intersect?</text></navLabel>
+                        <content src="chapter7/7.2.4.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter7_section7.2.5">
-                        <content src="chapter7/7.2.5.html" />
                         <navLabel><text>7.2.5: Intersections of reporting zones</text></navLabel>
+                        <content src="chapter7/7.2.5.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter7_section7.3">
-                    <content src="chapter7/7.3.html" />
                     <navLabel><text>7.3: "Advancing the Clock" in a Simulation</text></navLabel>
+                    <content src="chapter7/7.3.html" />
                     <navPoint class="h4" id="chapter7_section7.3.1">
-                        <content src="chapter7/7.3.1.html" />
                         <navLabel><text>7.3.1: Event-paced simulation of a spatially distributed queueing system</text></navLabel>
+                        <content src="chapter7/7.3.1.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter7_section7.4">
-                    <content src="chapter7/7.4.html" />
                     <navLabel><text>7.4: Choice of a Language for a Simulation</text></navLabel>
+                    <content src="chapter7/7.4.html" />
                 </navPoint>
                 <navPoint class="h3" id="chapter7_section7.5">
-                    <content src="chapter7/7.5.html" />
                     <navLabel><text>7.5: Advantages, Disadvantages, and Misuses of Simulation</text></navLabel>
+                    <content src="chapter7/7.5.html" />
                     <navPoint class="h4" id="chapter7_section7.5.1">
-                        <content src="chapter7/7.5.1.html" />
                         <navLabel><text>7.5.1: Advantages of simulation</text></navLabel>
+                        <content src="chapter7/7.5.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter7_section7.5.2">
-                        <content src="chapter7/7.5.2.html" />
                         <navLabel><text>7.5.2: Disadvantages of simulation</text></navLabel>
+                        <content src="chapter7/7.5.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter7_section7.5.3">
-                        <content src="chapter7/7.5.3.html" />
                         <navLabel><text>7.5.3: Misuses of simulation</text></navLabel>
+                        <content src="chapter7/7.5.3.html" />
                     </navPoint>
                 </navPoint>
             </navPoint>
             <navPoint class="h2" id="chapter7_sectionreferences">
-                <content src="chapter7/references7.html" />
                 <navLabel><text>Chapter 7 References</text></navLabel>
+                <content src="chapter7/references7.html" />
             </navPoint>
             <navPoint class="h2" id="chapter7_sectionproblems">
-                <content src="chapter7/problems7/index.html" />
                 <navLabel><text>Chapter 7 Problems</text></navLabel>
+                <content src="chapter7/problems7/index.html" />
             </navPoint>
         </navPoint>
         <navPoint class="h1" id="chapter8">
             <navLabel><text>Chapter 8: Implementation</text></navLabel>
             <content src="chapter8/8.0.html" />
             <navPoint class="h2" id="chapter8_section8">
-                <content src="chapter8/8.0.html" />
                 <navLabel><text>8: Implementation</text></navLabel>
+                <content src="chapter8/8.0.html" />
                 <navPoint class="h3" id="chapter8_section8.1">
-                    <content src="chapter8/8.1.html" />
                     <navLabel><text>8.1: Some Mini "War Stories"</text></navLabel>
+                    <content src="chapter8/8.1.html" />
                     <navPoint class="h4" id="chapter8_section8.1.1">
-                        <content src="chapter8/8.1.1.html" />
                         <navLabel><text>8.1.1: Don't take my men away!</text></navLabel>
+                        <content src="chapter8/8.1.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.1.2">
-                        <content src="chapter8/8.1.2.html" />
                         <navLabel><text>8.1.2: What-design a non-perfectly working system?</text></navLabel>
+                        <content src="chapter8/8.1.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.1.3">
-                        <content src="chapter8/8.1.3.html" />
                         <navLabel><text>8.1.3: Why spend time and money making decisions</text></navLabel>
+                        <content src="chapter8/8.1.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.1.4">
-                        <content src="chapter8/8.1.4.html" />
                         <navLabel><text>8.1.4: Busing to build</text></navLabel>
+                        <content src="chapter8/8.1.4.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.1.5">
-                        <content src="chapter8/8.1.5.html" />
                         <navLabel><text>8.1.5: Buses come in bunches</text></navLabel>
+                        <content src="chapter8/8.1.5.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.1.6">
-                        <content src="chapter8/8.1.6.html" />
                         <navLabel><text>8.1.6: Hypercubed ambulances</text></navLabel>
+                        <content src="chapter8/8.1.6.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.1.7">
-                        <content src="chapter8/8.1.7.html" />
                         <navLabel><text>8.1.7: Vanishing advocate (Figure 8.3)</text></navLabel>
+                        <content src="chapter8/8.1.7.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.1.8">
-                        <content src="chapter8/8.1.8.html" />
                         <navLabel><text>8.1.8: Model "on the road"</text></navLabel>
+                        <content src="chapter8/8.1.8.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter8_section8.2">
-                    <content src="chapter8/8.2.html" />
                     <navLabel><text>8.2: Model-Related Issues Affecting Implementation</text></navLabel>
+                    <content src="chapter8/8.2.html" />
                     <navPoint class="h4" id="chapter8_section8.2.1">
-                        <content src="chapter8/8.2.1.html" />
                         <navLabel><text>8.2.1: Performance measures</text></navLabel>
+                        <content src="chapter8/8.2.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.2.2">
-                        <content src="chapter8/8.2.2.html" />
                         <navLabel><text>8.2.2: Model accuracy</text></navLabel>
+                        <content src="chapter8/8.2.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.2.3">
-                        <content src="chapter8/8.2.3.html" />
                         <navLabel><text>8.2.3: Data for the model</text></navLabel>
+                        <content src="chapter8/8.2.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.2.4">
-                        <content src="chapter8/8.2.4.html" />
                         <navLabel><text>8.2.4: Documentation</text></navLabel>
+                        <content src="chapter8/8.2.4.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.2.5">
-                        <content src="chapter8/8.2.5.html" />
                         <navLabel><text>8.2.5: Model adaptability</text></navLabel>
+                        <content src="chapter8/8.2.5.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.2.6">
-                        <content src="chapter8/8.2.6.html" />
                         <navLabel><text>8.2.6: Exploring alternatives</text></navLabel>
+                        <content src="chapter8/8.2.6.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter8_section8.3">
-                    <content src="chapter8/8.3.html" />
                     <navLabel><text>8.3: Issues Related To People and Institutions</text></navLabel>
+                    <content src="chapter8/8.3.html" />
                     <navPoint class="h4" id="chapter8_section8.3.1">
-                        <content src="chapter8/8.3.1.html" />
                         <navLabel><text>8.3.1: The user</text></navLabel>
+                        <content src="chapter8/8.3.1.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.3.2">
-                        <content src="chapter8/8.3.2.html" />
                         <navLabel><text>8.3.2: The analyst</text></navLabel>
+                        <content src="chapter8/8.3.2.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.3.3">
-                        <content src="chapter8/8.3.3.html" />
                         <navLabel><text>8.3.3: The user's agency</text></navLabel>
+                        <content src="chapter8/8.3.3.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.3.4">
-                        <content src="chapter8/8.3.4.html" />
                         <navLabel><text>8.3.4: Other groups and agencies</text></navLabel>
+                        <content src="chapter8/8.3.4.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.3.5">
-                        <content src="chapter8/8.3.5.html" />
                         <navLabel><text>8.3.5: Model constituency</text></navLabel>
+                        <content src="chapter8/8.3.5.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.3.6">
-                        <content src="chapter8/8.3.6.html" />
                         <navLabel><text>8.3.6: Training: conquering the learning curve</text></navLabel>
+                        <content src="chapter8/8.3.6.html" />
                     </navPoint>
                     <navPoint class="h4" id="chapter8_section8.3.7">
-                        <content src="chapter8/8.3.7.html" />
                         <navLabel><text>8.3.7: Politics and improper reasons for analysis</text></navLabel>
+                        <content src="chapter8/8.3.7.html" />
                     </navPoint>
                 </navPoint>
                 <navPoint class="h3" id="chapter8_section8.4">
-                    <content src="chapter8/8.4.html" />
                     <navLabel><text>8.4: Concluding Remarks</text></navLabel>
+                    <content src="chapter8/8.4.html" />
                 </navPoint>
             </navPoint>
             <navPoint class="h2" id="chapter8_sectionreferences">
-                <content src="chapter8/references8.html" />
                 <navLabel><text>Chapter 8 References</text></navLabel>
+                <content src="chapter8/references8.html" />
             </navPoint>
             <navPoint class="h2" id="chapter8_sectiongenref">
-                <content src="chapter8/genref.html" />
                 <navLabel><text>General References</text></navLabel>
+                <content src="chapter8/genref.html" />
             </navPoint>
         </navPoint>
     </navMap>
     
     <pageList>
         <pageTarget class="h2" id="chapter2_sectionproblems" type="normal">
-            <content src="chapter2/problems2.html" />
             <navLabel><text>Chapter 2 Problems</text></navLabel>
+            <content src="chapter2/problems2.html" />
         </pageTarget>
         <pageTarget class="h2" id="chapter3_sectionreferences" type="normal">
-            <content src="chapter3/references3.html" />
             <navLabel><text>Chapter 3 References</text></navLabel>
+            <content src="chapter3/references3.html" />
         </pageTarget>
         <pageTarget class="h2" id="chapter3_sectionproblems" type="normal">
-            <content src="chapter3/problems3/index.html" />
             <navLabel><text>Chapter 3 Problems</text></navLabel>
+            <content src="chapter3/problems3/index.html" />
         </pageTarget>
         <pageTarget class="h2" id="chapter4_sectionreferences" type="normal">
-            <content src="chapter4/references4.html" />
             <navLabel><text>Chapter 4 References</text></navLabel>
+            <content src="chapter4/references4.html" />
         </pageTarget>
         <pageTarget class="h2" id="chapter4_sectionproblems" type="normal">
-            <content src="chapter4/problems4/index.html" />
             <navLabel><text>Chapter 4 Problems</text></navLabel>
+            <content src="chapter4/problems4/index.html" />
         </pageTarget>
         <pageTarget class="h2" id="chapter5_sectionreferences" type="normal">
-            <content src="chapter5/references5.html" />
             <navLabel><text>Chapter 5 References</text></navLabel>
+            <content src="chapter5/references5.html" />
         </pageTarget>
         <pageTarget class="h2" id="chapter5_sectionproblems" type="normal">
-            <content src="chapter5/problems5/index.html" />
             <navLabel><text>Chapter 5 Problems</text></navLabel>
+            <content src="chapter5/problems5/index.html" />
         </pageTarget>
         <pageTarget class="h2" id="chapter6_sectionreferences" type="normal">
-            <content src="chapter6/references6.html" />
             <navLabel><text>Chapter 6 References</text></navLabel>
+            <content src="chapter6/references6.html" />
         </pageTarget>
         <pageTarget class="h2" id="chapter6_sectionproblems" type="normal">
-            <content src="chapter6/problems6/index.html" />
             <navLabel><text>Chapter 6 Problems</text></navLabel>
+            <content src="chapter6/problems6/index.html" />
         </pageTarget>
         <pageTarget class="h2" id="chapter7_sectionreferences" type="normal">
-            <content src="chapter7/references7.html" />
             <navLabel><text>Chapter 7 References</text></navLabel>
+            <content src="chapter7/references7.html" />
         </pageTarget>
         <pageTarget class="h2" id="chapter7_sectionproblems" type="normal">
-            <content src="chapter7/problems7/index.html" />
             <navLabel><text>Chapter 7 Problems</text></navLabel>
+            <content src="chapter7/problems7/index.html" />
         </pageTarget>
         <pageTarget class="h2" id="chapter8_sectionreferences" type="normal">
-            <content src="chapter8/references8.html" />
             <navLabel><text>Chapter 8 References</text></navLabel>
+            <content src="chapter8/references8.html" />
         </pageTarget>
         <pageTarget class="h2" id="chapter8_sectiongenref" type="normal">
-            <content src="chapter8/genref.html" />
             <navLabel><text>General References</text></navLabel>
+            <content src="chapter8/genref.html" />
         </pageTarget>
     </pageList>
 </ncx>

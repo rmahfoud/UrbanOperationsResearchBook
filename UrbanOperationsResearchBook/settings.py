@@ -10,7 +10,8 @@ ALLOWED_DOMAIN = "web.mit.edu"
 ROOT_URL = 'http://web.mit.edu/urban_or_book/www/book/'
 SPIDER_NAME = 'uor'
 ROOT_DIR = '/tmp/' + SPIDER_NAME
-BOOK_FILES = ROOT_DIR + '/book/content'
+BOOK_DIR = ROOT_DIR + '/book'
+CONTENT_DIR = BOOK_DIR + '/content'
 IMAGE_FILE_CACHE = ROOT_DIR + '/image-cache/'
 
 BOT_NAME = 'UrbanOperationsResearchBook'
