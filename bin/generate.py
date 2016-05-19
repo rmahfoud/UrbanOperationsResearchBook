@@ -39,4 +39,8 @@ if __name__ == '__main__':
         opfgen.addSpineEntries(fd)
         with open(os.path.join(content_dir, "UrbanOperationsResearch.opf.3"), 'rt') as fd2:
             fd.write(fd2.read())
-    
+
+    # mimetype & META-INF
+    epub_dir = os.path.abspath(os.path.dirname(os.path.abspath(sys.argv[0])) + "/../epub")
+    shutil.copy(os.path.join(epub_dir, "mimetype"), os.path.join(settings.BOOK_DIR, "mimetype"))
+    shutil.copytree(os.path.join(epub_dir, "META-INF"), os.path.join(settings.BOOK_DIR, "META-INF"))
