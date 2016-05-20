@@ -1,67 +1,26 @@
-<?xml version="1.0"?>
+/* unvisited link */
+body {
+    background-color: white;
+	color: black;
+}
 
-<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="book-url" version="3.0" xml:lang="en-US">
+/* unvisited link */
+a:link {
+    color: darkblue;
+}
 
-	<metadata 
-   			xmlns:dc="http://purl.org/dc/elements/1.1/"
-      		xmlns:dcterms="http://purl.org/dc/terms/"
-     	 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      		xmlns:opf="http://www.idpf.org/2007/opf">
-      
-      	<dc:title>Urban Operations Research</dc:title>
-      	<dc:identifier id="book-url">http://web.mit.edu/urban_or_book/www/book/</dc:identifier>
-      	<dc:language>en-US</dc:language>
-		<dc:creator id="creator-larson">Richard C. Larson</dc:creator>
-		<meta refines="#creator-larson" property="role" scheme="marc:relators">aut</meta>
-      	<dc:creator id="creator-odoni">Amedeo R. Odoni</dc:creator>
-		<meta refines="#creator-odoni" property="role" scheme="marc:relators">aut</meta>
-		<dc:source id="isbn-id">urn:isbn:0139394478</dc:source>
-		<meta refines="#isbn-id" property="identifier-type" scheme="onix:codelist5">02</meta>
+/* visited link */
+a:visited {
+    color: gray;
+}
 
-      	<dc:subject>Non-fiction, Municipal services -- United States, Operations research, Civil Engineering</dc:subject>
-      	<dc:publisher>Prentice-Hall, NJ</dc:publisher>
-      	<dc:rights>Prentice-Hall, NJ, © 1981</dc:rights>
+.main-table {
+	width: 80%;
+	border: 0;
+	padding: 10;
+}
 
-      	<dc:contributor id="gitrepo">https://github.com/rmahfoud/UrbanOperationsResearchBook</dc:contributor>
-		<meta refines="#gitrepo" property="role" scheme="marc:relators">bkp</meta>
-      	<dc:contributor id="user">$USERNAME</dc:contributor>
-		<meta refines="#gitrepo" property="role" scheme="marc:relators">bkp</meta>
-   </metadata>
+.fullwidth-table {
+	width: 100%;
+}
 
-
-
-
-
-
-   <manifest>
-      <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
-      <item id="css" href="EpubGuide.css" media-type="text/css" />
-      <item id="logo" href="hxa7241-logo.svg" media-type="image/svg+xml" />
-      <item id="title" href="EpubGuide-title.html" media-type="application/xhtml+xml" />
-      <item id="contents" href="EpubGuide-contents.html" media-type="application/xhtml+xml" />
-      <item id="intro" href="EpubGuide-intro.html" media-type="application/xhtml+xml" />
-      <item id="part1" href="EpubGuide-1.html" media-type="application/xhtml+xml" />
-      <item id="part2" href="EpubGuide-2.html" media-type="application/xhtml+xml" />
-      <item id="part3" href="EpubGuide-3.html" media-type="application/xhtml+xml" />
-      <item id="part4" href="EpubGuide-4.html" media-type="application/xhtml+xml" />
-      <item id="specs" href="EpubGuide-specs.html" media-type="application/xhtml+xml" />
-   </manifest>
-
-   <spine toc="ncx">
-      <itemref idref="title" />
-      <itemref idref="contents" />
-      <itemref idref="intro" />
-      <itemref idref="part1" />
-      <itemref idref="part2" />
-      <itemref idref="part3" />
-      <itemref idref="part4" />
-      <itemref idref="specs" />
-   </spine>
-
-   <guide>
-      <reference type="title-page" title="Title Page" href="EpubGuide-title.html" />
-      <reference type="toc" title="Table of Contents" href="EpubGuide-contents.html" />
-      <reference type="text" title="Text" href="EpubGuide-intro.html" />
-   </guide>
-
-</package>

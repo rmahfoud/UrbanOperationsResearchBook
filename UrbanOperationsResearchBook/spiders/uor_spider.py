@@ -113,6 +113,23 @@ class UORSpider(scrapy.Spider):
         # Convert dirty HTML into well-formed xhtml
         doc = html.fromstring(body)
         body = etree.tostring(doc)
+        # Add a namespace to the plain html element
+        body = body.replace('<html>', '<html xmlns="http://www.w3.org/1999/xhtml">')
+        # Add doctype
+        DOCTYPE="""<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+"""
+        body = DOCTYPE + body
+        # Insert reference to CSS
+        body = body.replace("<head>", "<head>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"../UrbanOperationsResearch.css\" />")
+        # Remove attributes of <body>
+        body = re.sub(r'<body.*?>', '<body>', body, flags=re.IGNORECASE)
+        # Replace the styles of the main table
+        body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"80%"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body, flags=re.IGNORECASE)
+        # Replace the styles of other common kind of tables
+        body = re.sub(r'<table\s+width\s*=\s*"100%"\s*>', '<table class="fullwidth-table">', body, flags=re.IGNORECASE)
+        
         return response.replace(body=body)
 
     def parse_section_contents(self, response):

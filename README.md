@@ -20,6 +20,10 @@ bin/run.py
 
 The EPUB book will appear in <tt>/tmp/uor/uor.epub</tt> for you to enjoy on your favorite e-reader.
 
+# Validation
+
+The generated EPUB was validated using the online [EPUB Validator (beta)](http://validator.idpf.org/application/validate) tool.
+
 # Quality
 
 The following are issues I found with the book as it's currently present online:
@@ -30,7 +34,7 @@ The following are issues I found with the book as it's currently present online:
 
 # Copyrights
 
-These scripts are for personal enjoyment only. Please respect the copyright owners of the original book and do not distribute the ebook that's produced by these scripts.
+These scripts and resulting EPUB are for personal enjoyment only. Please respect the copyright owners of the original book and do not distribute the ebook that's produced by these scripts.
 
 # Dependencies:
 
@@ -51,7 +55,7 @@ sudo pip install scrapy
 ```
 
 # TODO:
-
+- Parse and collate problems
 - Create contents.html with global reading list
 - Remove inline style and replace with CSS
 - Add images to manifest in OPF file
