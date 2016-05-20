@@ -33,16 +33,9 @@ class UORSpider(scrapy.Spider):
         return {'item_type': 'chapter'}
 
     def parse(self, response):
-        chapter = self.new_chapter()
-        chapter['no'] = 0
-        chapter['title'] = 'Home Page'
-        chapter['full_title'] = 'Home Page'
-        chapter['url'] = response.url
-        chapter['sections'] = []
-        section_meta = {'section': chapter}
-        yield scrapy.Request(response.url, callback=self.parse_section_contents, meta=section_meta)
-        self.chapters[0] = chapter
-        yield chapter
+        homepage = {'item_type': 'homepage'}
+        self.book['homepage'] = homepage
+        yield scrapy.Request(response.url, callback=self.parse_homepage, meta={'homepage': homepage})
         for href in response.xpath("//a[contains(@href,chapter)]/@href"):
             url = response.urljoin(href.extract())
             self.logger.debug("Crawling url %s" % url)
@@ -145,6 +138,13 @@ class UORSpider(scrapy.Spider):
         # Download images
         section['file_urls'] = [uor.join_url(response.url, url) for url in response.xpath('//table//img/@src').extract()]
         yield section
+
+    def parse_homepage(self, response):
+        homepage = response.meta['homepage']
+        self.logger.debug("Parsing content of home page %s" % response.url)
+        # Discard content but only download resources
+        homepage['file_urls'] = [uor.join_url(response.url, url) for url in response.xpath('//table//img/@src').extract()]
+        yield homepage
 
     def parse_problems(self, response):
         section = response.meta['section']

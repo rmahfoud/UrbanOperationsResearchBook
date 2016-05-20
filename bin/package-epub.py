@@ -19,10 +19,10 @@ if __name__ == '__main__':
     shutil.rmtree(meta_inf, ignore_errors=True)
     shutil.copytree(os.path.join(epub_templates, "META-INF"), meta_inf)
     shutil.copy(os.path.join(epub_templates, "content/UrbanOperationsResearch.css"), os.path.join(epub_source, "content/UrbanOperationsResearch.css"))
+    shutil.copy(os.path.join(epub_templates, "content/home.html"), os.path.join(epub_source, "content/home.html"))
 
     epubfile_name = os.path.join(settings.ROOT_DIR, "uor.epub")
     epubfile = zipfile.ZipFile(epubfile_name, "w", zipfile.ZIP_DEFLATED, False)
-    epubfile.debug = 3
     def add_file(file, compression=zipfile.ZIP_DEFLATED):
         epubfile.write(file, uor.relative_url(epub_source, file), compression)
     
@@ -37,3 +37,4 @@ if __name__ == '__main__':
     add_dir(os.path.join(epub_source, "META-INF"))
     add_dir(os.path.join(epub_source, "content"))
     epubfile.close()
+    print "EPUB file generated successfully: %s" % epubfile_name

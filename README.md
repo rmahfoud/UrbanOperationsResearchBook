@@ -56,7 +56,6 @@ sudo pip install scrapy
 
 # TODO:
 - Parse and collate problems
-- Create contents.html with global reading list
 - Remove inline style and replace with CSS
 - Add images to manifest in OPF file
 - Figure out why quotes are not showing in epub reader 
