@@ -5,6 +5,7 @@ import UrbanOperationsResearchBook as uor
 import UrbanOperationsResearchBook.settings as settings
 import scrapy
 import os, shutil, re
+from lxml import html, etree
 
 class UORSpider(scrapy.Spider):
     name = settings.SPIDER_NAME
@@ -12,12 +13,13 @@ class UORSpider(scrapy.Spider):
     root_url = settings.ROOT_URL
     start_urls = [root_url]
     destination_dir = settings.CONTENT_DIR
+    book = None
     
     def __init__(self, *args, **kwargs):
-        if os.path.isdir(self.destination_dir):
-            shutil.rmtree(self.destination_dir)
+        shutil.rmtree(self.destination_dir, ignore_errors=True)
         os.makedirs(self.destination_dir)
-        self.book = kwargs['book']
+        if 'book' in kwargs:
+            self.book = kwargs['book']
         if not self.book:
             self.book = {'item_type': 'book'}
         self.chapters = dict()
@@ -103,18 +105,26 @@ class UORSpider(scrapy.Spider):
                 self.logger.debug("Section %s, url: %s, title: %s" % (section['no'], section['url'], section['title']))
         yield chapter
 
+    def cleanup_content(self, response):
+        # Remove malformed comments
+        body = re.sub(r'<!--.*?--!>', '', response.body)
+        # Remove anything before and after the horizontal lines
+        body = re.sub(r'(?is)(^.*<body[^>]*>).*?<hr>(.*)<hr>.*(</body>.*$)', r'\1\2\3', body)
+        # Convert dirty HTML into well-formed xhtml
+        doc = html.fromstring(body)
+        body = etree.tostring(doc)
+        return response.replace(body=body)
+
     def parse_section_contents(self, response):
         section = response.meta['section']
         self.logger.debug("Parsing content of %s" % response.url)
 
-        # Remove malformed comments
-        response = response.replace(body=response.body.replace("<!--table--!>", ""))
-        # Remove anything before and after the horizontal lines
-        body = re.sub(r'(?is)(^.*<body[^>]*>).*?<hr>(.*)<hr>.*(</body>.*$)', r'\1\2\3', response.body)
+        # Remove "extra" stuff and convert into valid xhtml
+        response = self.cleanup_content(response)
         # Save to file name matchine url
         file_name = uor.relative_url(self.root_url, response.url)
         self.logger.debug("Saving body of %s to %s" % (response.url, file_name))
-        section['content_file'] = self.save_to_file(file_name, body)
+        section['content_file'] = self.save_to_file(file_name, response.body)
         # Download images
         section['file_urls'] = [uor.join_url(response.url, url) for url in response.xpath('//table//img/@src').extract()]
         yield section

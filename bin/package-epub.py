@@ -14,9 +14,11 @@ if __name__ == '__main__':
     epub_templates = os.path.abspath(os.path.dirname(os.path.abspath(sys.argv[0])) + "/../epub")
 
     # mimetype & co
-    shutil.copy(os.path.join(epub_dir, "mimetype"), os.path.join(epub_source, "mimetype"))
-    shutil.copytree(os.path.join(epub_dir, "META-INF"), os.path.join(epub_source, "META-INF"))
-    shutil.copytree(os.path.join(epub_dir, "content/UrbanOpertionsResearch.css"), os.path.join(epub_source, "content/UrbanOpertionsResearch.css"))
+    shutil.copy(os.path.join(epub_templates, "mimetype"), os.path.join(epub_source, "mimetype"))
+    meta_inf = os.path.join(epub_source, "META-INF")
+    shutil.rmtree(meta_inf, ignore_errors=True)
+    shutil.copytree(os.path.join(epub_templates, "META-INF"), meta_inf)
+    shutil.copy(os.path.join(epub_templates, "content/UrbanOperationsResearch.css"), os.path.join(epub_source, "content/UrbanOperationsResearch.css"))
 
     epubfile_name = os.path.join(settings.ROOT_DIR, "uor.epub")
     epubfile = zipfile.ZipFile(epubfile_name, "w", zipfile.ZIP_DEFLATED, False)

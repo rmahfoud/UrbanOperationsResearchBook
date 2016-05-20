@@ -18,7 +18,7 @@ cd UrbanOperationsResearchBook
 bin/run.py
 ```
 
-The EPUB book will appear in the current director as <tt>UrbanOperationsResearch.epub</tt> for you to enjoy on your favorite e-reader.
+The EPUB book will appear in <tt>/tmp/uor/uor.epub</tt> for you to enjoy on your favorite e-reader.
 
 # Quality
 
@@ -52,10 +52,12 @@ sudo pip install scrapy
 
 # TODO:
 
+- Create contents.html with global reading list
 - Remove inline style and replace with CSS
-- Eliminate malformed comments: <!-- ... --!>
-- Update links in index.htm to point to relative URL of top of chapter
-- Convert to xhtml
+- Add images to manifest in OPF file
+- Figure out why quotes are not showing in epub reader 
+- Figure out why "bold" when it starts, it doesn't end till end of file epub reader (1.2)
+- Figure out why everything is centered and why formulas as messed-up in epub reader 
 
 # License
 
