@@ -20,6 +20,8 @@ bin/run.py
 
 The EPUB book will appear in <tt>/tmp/uor/uor.epub</tt> for you to enjoy on your favorite e-reader.
 
+The settings (including file paths) are defined in <tt>UrbanOperationsResearchBook/settings.py</tt>.
+
 # Validation
 
 The generated EPUB was validated using the online [EPUB Validator (beta)](http://validator.idpf.org/application/validate) tool.

@@ -122,6 +122,11 @@ class UORSpider(scrapy.Spider):
         body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"80%"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body, flags=re.IGNORECASE)
         # Replace the styles of other common kind of tables
         body = re.sub(r'<table\s+width\s*=\s*"100%"\s*>', '<table class="fullwidth-table">', body, flags=re.IGNORECASE)
+        # Center images using CSS instead of <centers> tag which is disallowed in XHTML.. add an alt while at it...
+        body = re.sub(r'<center>\s*<img (.*?)/>\s*</center>', r'<img class="block-centered" \1 />', body, flags=re.IGNORECASE)
+        body = re.sub(r'<center>\s*((?:<br\s*/>\s*)*)<img (.*?)/>\s*</center>', r'\1<img class="block-centered" \2 />', body, flags=re.IGNORECASE)
+        body = re.sub(r'<center>\s*<p>\s*<img (.*?)/>\s*</p>\s*</center>', r'<img class="block-centered" \1 />', body, flags=re.IGNORECASE)
+        body = re.sub(r'<center>\s*<pre>\s*<img (.*?)/>\s*</pre>\s*</center>', r'<img class="block-centered" \1 />', body, flags=re.IGNORECASE)
         
         return response.replace(body=body)
 

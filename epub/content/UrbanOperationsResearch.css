@@ -93,3 +93,8 @@ img.home-header-centered {
 p.home-centered {
     text-align: center;
 }
+
+img.block-centered {
+    display:block;
+    margin:auto;
+}
