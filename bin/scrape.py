@@ -5,7 +5,7 @@ sys.path.append('../UrbanOperationsResearchBook')
 import UrbanOperationsResearchBook.settings as settings
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
-import json, os, copy
+import json, os, copy, shutil
 
 
 def delete_keys_from_dict(d, keys):
@@ -25,16 +25,24 @@ def delete_keys_from_dict(d, keys):
     
 if __name__ == '__main__':
     process = CrawlerProcess(get_project_settings())
-    result_book = {'item_type': 'book', 'base_dir': settings.CONTENT_DIR}
-    process.crawl('uor', book=result_book)
+    book = {'item_type': 'book', 'base_dir': settings.CONTENT_DIR}
+    process.crawl('uor', book=book)
     process.start() # the script will block here until the crawling is finished
 
+    # Easily-fixable misses in the original that we're correcting here
+    book['additional_images'] = []
+    missing = [['chapter2/pics/pi.gif', 'chapter2/images/pi.gif']]
+    for missing_from, where_to_get in missing:
+        print "Missing: %s, We can get from: %s" % (missing_from, where_to_get)
+        shutil.copy(os.path.join(settings.CONTENT_DIR, where_to_get), os.path.join(settings.CONTENT_DIR, missing_from))
+        book['additional_images'].append(missing_from)
+        
     # Write full JSON of book metadata
     with open(os.path.join(settings.ROOT_DIR, "book.json"), "w") as fd:
-        json.dump(result_book, fd, indent=1)
+        json.dump(book, fd, indent=1)
 
     # Write JSON without files and file_urls
-    result_book_nofiles = copy.deepcopy(result_book)
+    result_book_nofiles = copy.deepcopy(book)
     delete_keys_from_dict(result_book_nofiles, set(['file_urls', 'files']))
     with open(os.path.join(settings.ROOT_DIR, "book.nofiles.json"), "w") as fd:
         json.dump(result_book_nofiles, fd, indent=1)

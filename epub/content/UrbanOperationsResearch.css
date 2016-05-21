@@ -37,42 +37,30 @@ a:visited {
     font-size: 2em;
 }
 h1.contents {
-    font-family: arial;
-    font-size: 1.5em;
     font-weight: bold;
     margin-left: 0;
     text-align: left;
 }
 h2.contents {
-    font-family: arial;
-    font-size: 1.3em;
     font-weight: bold;
     margin-left: 1em;
     text-align: left;
 }
 h3.contents {
-    font-family: arial;
-    font-size: 1.1em;
     font-style: italic;
     margin-left: 2em;
     text-align: left;
 }
 h4.contents {
-    font-family: arial;
-    font-size: 1.0em;
     margin-left: 3em;
     text-align: left;
 }
 h5.contents {
-    font-family: arial;
-    font-size: 0.9em;
     font-style: italic;
     margin-left: 4em;
     text-align: left;
 }
 h6.contents {
-    font-family: arial;
-    font-size: 0.8em;
     margin-left: 5em;
     text-align: left;
 }

@@ -37,14 +37,16 @@ Please report any issues in the EPUB on [github](https://github.com/rmahfoud/Urb
 
 The following are issues I found with the book as it's currently present online:
 
-- The URL of [Prof Odoni's home page](http://web.mit.edu/orc/www/faculty/odoni.html) leads nowhere
-- [Section 4.8.1](http://web.mit.edu/urban_or_book/www/book/chapter4/4.8.1.html) is missing
+- The URL of [Prof Odoni's home page](http://web.mit.edu/orc/www/faculty/odoni.html) leads nowhere. I linked to his [new profile page](https://cee.mit.edu/odoni)
+- The URL of [Prof Larson's home page](http://www-caes.mit.edu/people/larson.html) leads nowhere. I linked to his [new profile page](https://esd.mit.edu/Faculty_Pages/larson/larson.htm)
+- [Section 4.8.1: Why Are M/G/m, G/G/1, and G/G/m Difficult?](http://web.mit.edu/urban_or_book/www/book/chapter4/4.8.1.html) is missing
 - [Table 6-12](http://web.mit.edu/urban_or_book/www/book/chapter6/images6/Table6-12.gif) in [section 6.5.7](http://web.mit.edu/urban_or_book/www/book/chapter6/6.5.7.html) is missing 
 - Its HTML in general is not of modern quality and does not translate directly to XHTML
 
 While doing the conversion I ignored many of the warnings/errors due to non-canonical XHTML because it turns out most good readers do not require canonical XHTML and will work and render pages just fine. I ended up doing the bare-minimum required translations. Some things you might encounter (and might want to submit fixes for) if you use a reader that doesn't entirely like the current XHTML:
 
 - The use of the ```<center>``` tag which is disallowed
+- The use of the ```<font>``` tag which is disallowed
 - The use of inline styles (e.g. ```<table cellpadding="5">```, or ```<p align="center">```) instead of CSS
 
 # Dependencies:
@@ -68,12 +70,14 @@ sudo pip install scrapy
 
 # TODO:
 
-- Parse and collate problems for each chapter
-- Add images to manifest in OPF file
-- Fix NCX and contents file to inclde "Problems" and "References" under chapter. Curretnly is_sub_section returns false, so they get rendered outside the main section.
-- FBReader: why are images (formulas) not displayed inline? All formulas are messed up
-- 1.2: messed up blockquote
-- Remove inline style and replace with CSS
+1. Parse and collate problems for each chapter
+1. Fix NCX and contents file to inclde "Problems" and "References" under chapter. Curretnly is_sub_section returns false, so they get rendered outside the main section.
+1. Successfully convert to MOBI format in calibre to use on Kindle.
+1. Add images to manifest in OPF file
+1. 1.2: messed up blockquote
+1. Remove use of ```<font>``` tag
+1. Remove use of ```<center>``` tag
+1. Remove inline style and replace with CSS
 
 # Copyrights
 
