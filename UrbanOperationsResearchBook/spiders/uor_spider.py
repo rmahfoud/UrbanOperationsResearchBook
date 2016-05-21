@@ -101,8 +101,6 @@ class UORSpider(scrapy.Spider):
     def cleanup_content(self, response):
         # Remove malformed comments
         body = re.sub(r'<!--.*?--!>', '', response.body)
-        # Remove anything before and after the horizontal lines
-        body = re.sub(r'(?is)(^.*<body[^>]*>).*?<hr>(.*)<hr>.*(</body>.*$)', r'\1\2\3', body)
         # Convert dirty HTML into well-formed xhtml
         doc = html.fromstring(body)
         body = etree.tostring(doc)
@@ -117,16 +115,23 @@ class UORSpider(scrapy.Spider):
         # Insert reference to CSS
         body = body.replace("<head>", "<head>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"../UrbanOperationsResearch.css\" />")
         # Remove attributes of <body>
-        body = re.sub(r'<body.*?>', '<body>', body, flags=re.IGNORECASE)
+        body = re.sub(r'<body.*?>', '<body>', body)
         # Replace the styles of the main table
-        body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"80%"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body, flags=re.IGNORECASE)
+        body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"80%"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body)
+        body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"(80%|732)"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body)
         # Replace the styles of other common kind of tables
-        body = re.sub(r'<table\s+width\s*=\s*"100%"\s*>', '<table class="fullwidth-table">', body, flags=re.IGNORECASE)
+        body = re.sub(r'<table\s+width\s*=\s*"100%"\s*>', '<table class="fullwidth-table">', body)
         # Center images using CSS instead of <centers> tag which is disallowed in XHTML.. add an alt while at it...
-        body = re.sub(r'<center>\s*<img (.*?)/>\s*</center>', r'<img class="block-centered" \1 />', body, flags=re.IGNORECASE)
-        body = re.sub(r'<center>\s*((?:<br\s*/>\s*)*)<img (.*?)/>\s*</center>', r'\1<img class="block-centered" \2 />', body, flags=re.IGNORECASE)
-        body = re.sub(r'<center>\s*<p>\s*<img (.*?)/>\s*</p>\s*</center>', r'<img class="block-centered" \1 />', body, flags=re.IGNORECASE)
-        body = re.sub(r'<center>\s*<pre>\s*<img (.*?)/>\s*</pre>\s*</center>', r'<img class="block-centered" \1 />', body, flags=re.IGNORECASE)
+        body = re.sub(r'<center>\s*<img (.*?)/>\s*</center>', r'<img class="block-centered" \1 />', body)
+        body = re.sub(r'<center>\s*((?:<br\s*/>\s*)*)<img (.*?)/>\s*</center>', r'\1<img class="block-centered" \2 />', body)
+        body = re.sub(r'<center>\s*<p>\s*<img (.*?)/>\s*</p>\s*</center>', r'<img class="block-centered" \1 />', body)
+        body = re.sub(r'<center>\s*<pre>\s*<img (.*?)/>\s*</pre>\s*</center>', r'<img class="block-centered" \1 />', body)
+        # Remove horizontal
+        body = re.sub(r'<hr\s*/>', '', body)
+        # Remove navigation buttons
+        body = re.sub(r'<a .*?>\s*<img\s*src="images/next.gif" .*?</a>', '', body);
+        body = re.sub(r'<a .*?>\s*<img\s*src="images/contents.gif".*?</a>', '', body);
+        body = re.sub(r'(<br\s*/>\s*)*\s*<p>\s*(<br\s*/>\s*)*\s*<a .*?>\s*<img\s*src="images/previous.gif".*?</a>\s*(<br\s*/>\s*)*\s*</p>\s*(<br\s*/>\s*)*', '', body);
         
         return response.replace(body=body)
 
