@@ -12,7 +12,7 @@ SPIDER_NAME = 'uor'
 ROOT_DIR = '/tmp/' + SPIDER_NAME
 BOOK_DIR = ROOT_DIR + '/book'
 CONTENT_DIR = BOOK_DIR + '/content'
-ORIGINALS_DIR = BOOK_DIR + '/original-html'
+ORIGINALS_DIR = ROOT_DIR + '/original-html'
 IMAGE_FILE_CACHE = ROOT_DIR + '/image-cache/'
 
 BOT_NAME = 'UrbanOperationsResearchBook'

@@ -70,7 +70,6 @@ sudo pip install scrapy
 
 # TODO:
 
-1. Fix NCX and contents file to inclde "Problems" and "References" under chapter. Curretnly is_sub_section returns false, so they get rendered outside the main section.
 1. Successfully convert to MOBI format in calibre to use on Kindle.
 1. Add images to manifest in OPF file
 1. 1.2: messed up blockquote
