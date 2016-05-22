@@ -26,6 +26,9 @@ class UORSpider(scrapy.Spider):
         self.book['chapters'] = self.chapters
         return object.__init__(self, *args, **kwargs)
 
+    def new_problem(self): 
+        return {'item_type': 'problem'}
+
     def new_section(self): 
         return {'item_type': 'section'}
 
@@ -75,6 +78,7 @@ class UORSpider(scrapy.Spider):
                     section['title'] = "Problems"
                     section['full_title'] = "Chapter %s Problems" % chapter['no']
                     section['section_type'] = "problems"
+                    section['problems'] = []
                     yield scrapy.Request(section['url'], callback=self.parse_problems, meta=section_meta)
                 elif section_short_url.startswith("references"):
                     section['no'] = "references"
@@ -118,12 +122,14 @@ class UORSpider(scrapy.Spider):
         body = re.sub(r'<body.*?>', '<body>', body)
         # Replace the styles of the main table
         body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"80%"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body)
-        body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"(80%|732)"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body)
+        body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"(80%|732|450)"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body)
+        # Shows up in some problems in chapter 3
+        body = re.sub(r'<td\s*width="610">', '<td>', body)
         # Replace the styles of other common kind of tables
         body = re.sub(r'<table\s+width\s*=\s*"100%"\s*>', '<table class="fullwidth-table">', body)
         # Center images using CSS instead of <centers> tag which is disallowed in XHTML.. add an alt while at it...
         body = re.sub(r'<center>\s*<img (.*?)/>\s*</center>', r'<img class="block-centered" \1 />', body)
-        body = re.sub(r'<center>\s*((?:<br\s*/>\s*)*)<img (.*?)/>\s*</center>', r'\1<img class="block-centered" \2 />', body)
+        body = re.sub(r'<center>\s*((?:<br/>\s*)*)<img (.*?)/>\s*</center>', r'\1<img class="block-centered" \2 />', body)
         body = re.sub(r'<center>\s*<p>\s*<img (.*?)/>\s*</p>\s*</center>', r'<img class="block-centered" \1 />', body)
         body = re.sub(r'<center>\s*<pre>\s*<img (.*?)/>\s*</pre>\s*</center>', r'<img class="block-centered" \1 />', body)
         # Remove horizontal
@@ -131,7 +137,10 @@ class UORSpider(scrapy.Spider):
         # Remove navigation buttons
         body = re.sub(r'<a .*?>\s*<img\s*src="images/next.gif" .*?</a>', '', body);
         body = re.sub(r'<a .*?>\s*<img\s*src="images/contents.gif".*?</a>', '', body);
-        body = re.sub(r'(<br\s*/>\s*)*\s*<p>\s*(<br\s*/>\s*)*\s*<a .*?>\s*<img\s*src="images/previous.gif".*?</a>\s*(<br\s*/>\s*)*\s*</p>\s*(<br\s*/>\s*)*', '', body);
+        body = re.sub(r'(<br/>\s*)*\s*<p>\s*(<br/>\s*)*\s*<a .*?>\s*<img\s*src="images/previous.gif".*?</a>\s*(<br/>\s*)*\s*</p>\s*(<br/>\s*)*', '', body);
+        # Remove empty paragraphs/spacers at the beginning of the page
+        body = re.sub(r'<body>\s*<p>\s*(<br/>\s*)*\s*</p>\s*(<br/>\s*)*', '<body>', body);
+        body = re.sub(r'<body>\s*(<br/>\s*)*', '<body>', body);
         
         return response.replace(body=body)
 
@@ -158,12 +167,17 @@ class UORSpider(scrapy.Spider):
 
     def parse_problems(self, response):
         section = response.meta['section']
-        self.logger.debug("Parsing problems for section: %s" % section)
-
-        file_name = uor.relative_url(self.root_url, response.url)
-        self.logger.debug("Saving body of %s to %s" % (response.url, file_name))
-        section['content_file'] = self.save_to_file(file_name, response.body)
-        yield section
+        problems = section['problems']
+        for url in response.xpath("//tr/td[2]/font/a/@href").extract():
+            if 'solution' in url:
+                continue
+            problem = self.new_problem()
+            problem['url'] = uor.join_url(response.url, url)
+            problem['no'] = url[:-5]
+            problem_meta = {'section': problem}
+            problems.append(problem)
+            yield scrapy.Request(problem['url'], callback=self.parse_section_contents, meta=problem_meta)
+        yield problem
 
     def save_to_file(self, file_name, body):
         file_name = os.path.join(self.destination_dir, file_name)

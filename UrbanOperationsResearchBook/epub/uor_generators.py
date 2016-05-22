@@ -159,7 +159,7 @@ class UORNCXGenerator(UORXmlGenerator):
         self.current_indent = 8
         for chapter_no in sorted(self.book['chapters'].keys()):
             for section in self.book['chapters'][chapter_no]['sections']:
-                if section['section_type'] != 'content':
+                if section['section_type'] != 'content' and 'content_file' in section:
                     self.write_line(outfd, "<pageTarget class=\"h2\" id=\"page_%s\" type=\"normal\">" % self.get_section_id(chapter_no, section))
                     self.write_line(outfd, "    <navLabel><text>%s</text></navLabel>" % section['full_title'])
                     self.write_line(outfd, "    <content src=\"%s\" />" % self.relative_url(section['content_file']))

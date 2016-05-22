@@ -32,7 +32,22 @@ if __name__ == '__main__':
             if os.path.isfile(full_path):
                 add_file(full_path, compression)
             elif os.path.isdir(full_path):
+                if 'problems' in file:
+                    add_problems_dir(full_path, compression)
+                else:
+                    add_dir(full_path, compression)
+
+    def add_problems_dir(dir, compression=zipfile.ZIP_DEFLATED):
+        for file in os.listdir(dir):
+            full_path = os.path.join(dir, file)
+            if os.path.isfile(full_path):
+                # skip all individual problems
+                if file != 'problems.html':
+                    continue
+                add_file(full_path, compression)
+            elif os.path.isdir(full_path):
                 add_dir(full_path, compression)
+
     add_file(os.path.join(epub_source, "mimetype"), zipfile.ZIP_STORED)
     add_dir(os.path.join(epub_source, "META-INF"))
     add_dir(os.path.join(epub_source, "content"))
