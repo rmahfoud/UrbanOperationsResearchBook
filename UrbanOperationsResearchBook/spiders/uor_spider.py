@@ -13,11 +13,14 @@ class UORSpider(scrapy.Spider):
     root_url = settings.ROOT_URL
     start_urls = [root_url]
     destination_dir = settings.CONTENT_DIR
+    originals_dir = settings.ORIGINALS_DIR
     book = None
     
     def __init__(self, *args, **kwargs):
         shutil.rmtree(self.destination_dir, ignore_errors=True)
         os.makedirs(self.destination_dir)
+        shutil.rmtree(self.originals_dir, ignore_errors=True)
+        os.makedirs(self.originals_dir)
         if 'book' in kwargs:
             self.book = kwargs['book']
         if not self.book:
@@ -105,6 +108,13 @@ class UORSpider(scrapy.Spider):
     def cleanup_content(self, response):
         # Remove malformed comments
         body = re.sub(r'<!--.*?--!>', '', response.body)
+        
+        # Some math formulas use < and >... luckily surrounded by spaces
+        body = re.sub(r' << ', ' &lt;&lt; ', body)
+        body = re.sub(r' < ', ' &lt; ', body)
+        body = re.sub(r' >> ', ' &gt;&gt; ', body)
+        body = re.sub(r' > ', ' &gt; ', body)
+        
         # Convert dirty HTML into well-formed xhtml
         doc = html.fromstring(body)
         body = etree.tostring(doc)
@@ -122,9 +132,9 @@ class UORSpider(scrapy.Spider):
         body = re.sub(r'<body.*?>', '<body>', body)
         # Replace the styles of the main table
         body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"80%"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body)
-        body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"(80%|732|450)"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body)
+        body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"(80%|732|687|450)"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body)
         # Shows up in some problems in chapter 3
-        body = re.sub(r'<td\s*width="610">', '<td>', body)
+        body = re.sub(r'<td\s*width="610|744">', '<td>', body)
         # Replace the styles of other common kind of tables
         body = re.sub(r'<table\s+width\s*=\s*"100%"\s*>', '<table class="fullwidth-table">', body)
         # Center images using CSS instead of <centers> tag which is disallowed in XHTML.. add an alt while at it...
@@ -146,14 +156,15 @@ class UORSpider(scrapy.Spider):
 
     def parse_section_contents(self, response):
         section = response.meta['section']
-        self.logger.debug("Parsing content of %s" % response.url)
 
+        # Save the original, to fix anomalies
+        file_name = uor.relative_url(self.root_url, response.url)
+        self.save_to_original_file(file_name, response.body)
+        
         # Remove "extra" stuff and convert into valid xhtml
         response = self.cleanup_content(response)
-        # Save to file name matchine url
-        file_name = uor.relative_url(self.root_url, response.url)
-        self.logger.debug("Saving body of %s to %s" % (response.url, file_name))
-        section['content_file'] = self.save_to_file(file_name, response.body)
+        section['content_file'] = self.save_to_epub_file(file_name, response.body)
+        
         # Download images
         section['file_urls'] = [uor.join_url(response.url, url) for url in response.xpath('//table//img/@src').extract()]
         yield section
@@ -179,8 +190,14 @@ class UORSpider(scrapy.Spider):
             yield scrapy.Request(problem['url'], callback=self.parse_section_contents, meta=problem_meta)
         yield problem
 
-    def save_to_file(self, file_name, body):
-        file_name = os.path.join(self.destination_dir, file_name)
+    def save_to_original_file(self, file_name, body):
+        return self.save_to_file(self.originals_dir, file_name, body)
+
+    def save_to_epub_file(self, file_name, body):
+        return self.save_to_file(self.destination_dir, file_name, body)
+
+    def save_to_file(self, dir_name, file_name, body):
+        file_name = os.path.join(dir_name, file_name)
         if os.path.isdir(file_name) or file_name.endswith('/'):
             file_name = os.path.join(file_name, 'index.html')
         self.logger.debug("Writing file %s" % file_name)
