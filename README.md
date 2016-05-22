@@ -30,8 +30,9 @@ The resulting EPUB was visually inspected with:
 
 - [calibre](https://calibre-ebook.com/) on the desktop (Ubuntu and Windows).
 - [Moon+ Reader Pro](http://www.moondownload.com/) on an Android phone.
-
-Please report any issues in the EPUB on [github](https://github.com/rmahfoud/UrbanOperationsResearchBook/issues).
+- Kinldle: after conversion using [calibre](https://calibre-ebook.com/) to ```.mobi``` it loaded fine in Kindle. Sections are interrupted by blank pages that I'm not sure where they come from. On my phone the quality of the text with inline images seems to suffer but on the tablet rendering looks fine.
+ 
+Please report any additional issues in the EPUB on [github](https://github.com/rmahfoud/UrbanOperationsResearchBook/issues).
 
 # Quality
 
@@ -70,9 +71,8 @@ sudo pip install scrapy
 
 # TODO:
 
-1. Successfully convert to MOBI format in calibre to use on Kindle.
+1. Successfully convert to MOBI format in [calibre](https://calibre-ebook.com/) to use on Kindle with no glitches.
 1. Add images to manifest in OPF file
-1. 1.2: messed up blockquote
 1. Remove use of ```<font>``` tag
 1. Remove use of ```<center>``` tag
 1. Remove inline style and replace with CSS
