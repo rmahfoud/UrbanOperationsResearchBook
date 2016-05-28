@@ -1,9 +1,3 @@
-<div style="text-align:center">
-
-![UOR Map](https://raw.githubusercontent.com/rmahfoud/UrbanOperationsResearchBook/master/map3.jpg)
-
-</div>
-
 # Summary
 
 This project is an effort to convert the online version of the first edition of [Urban Operations Research](http://web.mit.edu/urban_or_book/www/book/) book (Prentice-Hall © 1981) into a more readable ebook format (EPUB). This book is one of my favorites since I read parts of it during my graduate school. Unfortunately, it's out of print and used copies are sold at exorbitant prices. I thought it should be a nice exercise to scrape the online book and convert it to an EPUB that I can enjoy again.
@@ -18,9 +12,11 @@ cd UrbanOperationsResearchBook
 bin/run.py
 ```
 
-The EPUB book will appear in <tt>/tmp/uor/uor.epub</tt> for you to enjoy on your favorite e-reader.
+The EPUB book will appear in ``/tmp/uor/uor.epub`` for you to enjoy on your favorite e-reader.
 
-The settings (including file paths) are defined in <tt>UrbanOperationsResearchBook/settings.py</tt>.
+The settings (including file paths) are defined in ``UrbanOperationsResearchBook/settings.py``.
+
+These scripts do not clenup after themselves (yet). You need to manually delete output directory ``/tmp/uor`` to cleanup.
 
 # Validation
 
@@ -30,7 +26,7 @@ The resulting EPUB was visually inspected with:
 
 - [calibre](https://calibre-ebook.com/) on the desktop (Ubuntu and Windows).
 - [Moon+ Reader Pro](http://www.moondownload.com/) on an Android phone.
-- Kinldle: after conversion using [calibre](https://calibre-ebook.com/) to ```.mobi``` it loaded fine in Kindle. Sections are interrupted by blank pages that I'm not sure where they come from. On my phone the quality of the text with inline images seems to suffer but on the tablet rendering looks fine.
+- Kinldle: after conversion using [calibre](https://calibre-ebook.com/) to ``.mobi`` it loaded fine in Kindle. Sections are interrupted by blank pages that I'm not sure where they come from. On my phone the quality of the text with inline images seems to suffer but on the tablet rendering looks fine. This is most likely due to use of ``<table>`` in laying out sections and problems.
  
 Please report any additional issues in the EPUB on [github](https://github.com/rmahfoud/UrbanOperationsResearchBook/issues).
 
@@ -46,9 +42,9 @@ The following are issues I found with the book as it's currently present online:
 
 While doing the conversion I ignored many of the warnings/errors due to non-canonical XHTML because it turns out most good readers do not require canonical XHTML and will work and render pages just fine. I ended up doing the bare-minimum required translations. Some things you might encounter (and might want to submit fixes for) if you use a reader that doesn't entirely like the current XHTML:
 
-- The use of the ```<center>``` tag which is disallowed
-- The use of the ```<font>``` tag which is disallowed
-- The use of inline styles (e.g. ```<table cellpadding="5">```, or ```<p align="center">```) instead of CSS
+- The use of the ``<center>`` tag which is disallowed
+- The use of the ``<font>`` tag which is disallowed
+- The use of inline styles (e.g. ``<table cellpadding="5">``, or ``<p align="center">``) instead of CSS
 
 # Dependencies:
 
@@ -73,8 +69,8 @@ sudo pip install scrapy
 
 1. Successfully convert to MOBI format in [calibre](https://calibre-ebook.com/) to use on Kindle with no glitches.
 1. Add images to manifest in OPF file
-1. Remove use of ```<font>``` tag
-1. Remove use of ```<center>``` tag
+1. Remove use of ``<font>`` tag
+1. Remove use of ``<center>`` tag
 1. Remove inline style and replace with CSS
 
 # Copyrights

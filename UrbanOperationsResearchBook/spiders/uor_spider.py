@@ -17,9 +17,8 @@ class UORSpider(scrapy.Spider):
     book = None
     
     def __init__(self, *args, **kwargs):
-        shutil.rmtree(self.destination_dir, ignore_errors=True)
+        shutil.rmtree(settings.ROOT_DIR, ignore_errors=True)
         os.makedirs(self.destination_dir)
-        shutil.rmtree(self.originals_dir, ignore_errors=True)
         os.makedirs(self.originals_dir)
         if 'book' in kwargs:
             self.book = kwargs['book']
@@ -131,10 +130,9 @@ class UORSpider(scrapy.Spider):
         # Remove attributes of <body>
         body = re.sub(r'<body.*?>', '<body>', body)
         # Replace the styles of the main table
-        body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"80%"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body)
-        body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"(80%|732|687|450)"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body)
+        body = re.sub(r'<table\s+border\s*=\s*"0"\s+width\s*=\s*"(?:80%|732|687|450)"\s+cellpadding\s*=\s*"10"\s*>', '<table class="main-table">', body)
         # Shows up in some problems in chapter 3
-        body = re.sub(r'<td\s*width="610|744">', '<td>', body)
+        body = re.sub(r'<td\s+width\s*=\s*"(?:610|744)"\s*>', '<td>', body)
         # Replace the styles of other common kind of tables
         body = re.sub(r'<table\s+width\s*=\s*"100%"\s*>', '<table class="fullwidth-table">', body)
         # Center images using CSS instead of <centers> tag which is disallowed in XHTML.. add an alt while at it...
