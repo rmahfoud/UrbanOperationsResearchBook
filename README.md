@@ -1,10 +1,10 @@
 # Summary
 
-This project is an effort to convert the online version of the first edition of [Urban Operations Research](http://web.mit.edu/urban_or_book/www/book/) book (Prentice-Hall © 1981) into a more readable ebook format (EPUB). This book is one of my favorites since I read parts of it during my graduate school. Unfortunately, it's out of print and used copies are sold at exorbitant prices. I thought it should be a nice exercise to scrape the online book and convert it to an EPUB that I can enjoy again.
+This project is an effort to convert the online version of [Urban Operations Research](http://web.mit.edu/urban_or_book/www/book/) book (first edition, Prentice-Hall © 1981) into a more readable ebook format (EPUB). This book is one of my favorites since I read it during my graduate school. Unfortunately, it's out of print and used copies are being sold at exorbitant prices. I thought it should be a nice exercise to scrape the online book and convert it into an EPUB that I can enjoy again.
 
 # Running
 
-To produce the EPUB book, run the following: 
+To produce the EPUB book, install [dependencies](#Dependencies) and then run the following: 
 
 ```bash
 git clone https://github.com/rmahfoud/UrbanOperationsResearchBook.git
@@ -16,17 +16,17 @@ The EPUB book will appear in ``/tmp/uor/uor.epub`` for you to enjoy on your favo
 
 The settings (including file paths) are defined in ``UrbanOperationsResearchBook/settings.py``.
 
-These scripts do not clenup after themselves (yet). You need to manually delete output directory ``/tmp/uor`` to cleanup.
+These scripts do not cleanup after themselves (yet). You need to manually delete output directory ``/tmp/uor`` to cleanup.
 
 # Validation
 
 The generated EPUB was validated using the online [EPUB Validator (beta)](http://validator.idpf.org/application/validate) tool.
 
-The resulting EPUB was visually inspected with:
+It was also visually inspected with:
 
 - [calibre](https://calibre-ebook.com/) on the desktop (Ubuntu and Windows).
 - [Moon+ Reader Pro](http://www.moondownload.com/) on an Android phone.
-- Kinldle: after conversion using [calibre](https://calibre-ebook.com/) to ``.mobi`` it loaded fine in Kindle. Sections are interrupted by blank pages that I'm not sure where they come from. On my phone the quality of the text with inline images seems to suffer but on the tablet rendering looks fine. This is most likely due to use of ``<table>`` in laying out sections and problems.
+- Kinldle: after conversion using [calibre](https://calibre-ebook.com/) to ``.mobi`` it loaded fine in Kindle. Sections are interrupted by blank pages that I'm not sure where they come from (possibly due to use of ``<table>`` in layout). On my phone the quality of the text with inline images seems to suffer but on the tablet rendering looks fine.
  
 Please report any additional issues in the EPUB on [github](https://github.com/rmahfoud/UrbanOperationsResearchBook/issues).
 
@@ -46,7 +46,9 @@ While doing the conversion I ignored many of the warnings/errors due to non-cano
 - The use of the ``<font>`` tag which is disallowed
 - The use of inline styles (e.g. ``<table cellpadding="5">``, or ``<p align="center">``) instead of CSS
 
-# Dependencies:
+# Dependencies
+
+<a id="Dependencies"></a>
 
 On Ubuntu/Debian, run the following:
 
@@ -65,9 +67,8 @@ sudo pip install cryptography
 sudo pip install scrapy
 ```
 
-# TODO:
+# TODO
 
-1. Successfully convert to MOBI format in [calibre](https://calibre-ebook.com/) to use on Kindle with no glitches.
 1. Add images to manifest in OPF file
 1. Remove use of ``<font>`` tag
 1. Remove use of ``<center>`` tag
